@@ -1,0 +1,80 @@
+/* SERVICE COAST */
+
+.service-coast-wrapper {
+	margin-bottom: 65px;
+	.blockShadow();
+}
+
+.service-coast {
+	&__inner {
+		.clearfix();
+		padding: 20px 35px 20px 30px;
+		border-bottom: 1px solid #e7f2f8;
+	}
+	&__name {
+		float: left;
+		color: #9b9b9b;
+		line-height: 21px;
+	}
+	&__value {
+		float: right;
+	}
+	&__price {
+		color: #000000;
+		font-weight: 700;
+	}
+	&__arrow {
+		display: none;
+		&:before {
+			color: #ff0043;
+		}
+	}
+	&.list {
+		.service-coast__price {
+			display: none;
+		}
+		.service-coast__arrow {
+			display: block;
+			cursor: pointer;
+		}
+		&.open {
+			.service-coast__arrow {
+				&:before {
+					color: #8f96a0;
+					content: '\e901';
+				}
+			}
+			.service-coast__sublist {
+				display: block;
+			}
+		}
+	}
+	&__sublist {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: none;
+		li {
+			margin: 0 !important;
+			padding: 0;
+			.service-coast__price {
+				display: block !important;
+			}
+			.service-coast__arrow {
+				display: none !important;
+				cursor: default !important;
+			}
+			&:first-child {
+				.service-coast {
+					box-shadow: inset 0 5px 4px #d7e3e9;
+				}
+			}
+			&:last-child {
+				.service-coast {
+					box-shadow: inset 0 -5px 4px #d7e3e9;
+				}
+			}
+		}
+	}
+}
+

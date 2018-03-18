@@ -19,7 +19,7 @@ $(function() {
 		dots: true,
 		infinity: true,
 		fade: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		speed: 500,
 		slidesToShow: 1,
@@ -92,6 +92,25 @@ $('.about-company-slider').slick({
 			});
 		};
 	}
+
+	/* SERVICE COAST */
+
+	$('.service-coast').on('click','.service-coast__arrow', function() {
+
+		var _self = $(this),
+				parents = $(this).parents('.service-coast'),
+				sublist = $(parents).find('.service-coast__sublist');
+
+		if($(parents).hasClass('open')) {
+			$(sublist).slideUp('350', function() {
+				$(parents).removeClass('open');
+			});
+		} else {
+			$(sublist).slideDown('350', function() {
+				$(parents).addClass('open');
+			});
+		}
+	});
 
 
 	/* YOUTUBE API*/
