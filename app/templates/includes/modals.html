@@ -1,3 +1,30 @@
 {% block content %}
+<div id="callback-modal" class="uk-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Записаться на прием</div>
+			<a class="uk-modal-close uk-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="">
+				<fieldset>
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Телефон">
+					<input type="text" placeholder="E-mail">
+				</fieldset>
+				<fieldset>
+					<input type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+					<input type="text" data-uk-timepicker="{format:'24h'}">
+				</fieldset>
+				<label for="politics">
+					<input type="checkbox" id="politics">
+					<span class="custom-checkbox"></span>
+					<span class="custom-label">Я ознакомлен и согласен с условиями обработки данных</span>
+				</label>
+				<button type="submit" class="modal-btn btn btn--fill">Записаться</button>
+			</form>
+		</div>
+	</div>
+</div>
 
 {% endblock %}

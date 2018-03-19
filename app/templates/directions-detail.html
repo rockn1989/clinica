@@ -1,0 +1,116 @@
+{% extends "layouts/default.html" %}
+{% set title="Гинекология" %}
+{% set bread = ["Главная", "Направления", "Гинекология"] %}
+{% set main = false %}
+{% block content %}
+	<div class="content">
+		<div class="services-detail-header" style="background-image: url('img/detail-bg.png')">
+			<div class="uk-container">
+				{% include "includes/breadcrumbs.html" %}
+				<h1>Гинекология</h1>
+			</div>
+		</div>
+		<div class="content-body">
+			<div class="uk-container">
+				<div class="services-list-title">Выберите интересующую Вас услугу по направлению гинекология или  <a href="#callback" class="pink" data-uk-modal>Оставьте заявку </a> и консультант нашей клинике  поможет  с выбором услуги и врача по вашему недугу</div>
+					<div class="services-list grid-4" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'.services-list__item', delay:200, repeat: false}">
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Общие цены и услуги</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Клиника интимной пластики</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Эрозия шейной матки</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Нарушение менструального цикла</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Заболевание органов малого таза</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Климатрический синдром</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Лечение ЗПП</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Молочница</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Болезненные менструации</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+					</div>
+					<h2>Врачи отдела гинекологии</h2>
+					<div class="staff-cards-list" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'.staff-card', delay:200, repeat: false}">
+						<div class="staff-card uk-invisible">
+							<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+							<div class="staff-card__desc">
+								<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
+								<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+								<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+							</div>
+						</div>
+						<div class="staff-card uk-invisible">
+							<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+							<div class="staff-card__desc">
+								<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
+								<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+								<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+							</div>
+						</div>
+						<div class="staff-card uk-invisible">
+							<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+							<div class="staff-card__desc">
+								<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
+								<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+								<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+							</div>
+						</div>
+						<div class="staff-card uk-invisible">
+							<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+							<div class="staff-card__desc">
+								<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
+								<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+								<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+							</div>
+						</div>
+					</div>
+					<div class="seo-text">
+						<h2>ГИНЕКОЛОГИЯ В СТОЛИЧНОЙ МЕДИЦИНСКОЙ КЛИНИКЕ</h2>
+						<p>
+							Нуждаетесь ли Вы в быстрой и качественной медицинской помощи в Москве или хотите получить консультацию европейского эксперта – мы сделаем все, чтобы Вы могли восстановить свое здоровье и остались довольны нашим сервисом. Среди наших партнеров в Москве и Европе лишь те, чье качество лечения и чуткое отношение к пациенту уже подтверждены многолетним опытом и рекомендациями. Все специалисты клиник-партнеров работают в системе преемственности методов лечения. Нуждаетесь ли Вы в быстрой и качественной медицинской помощи в Москве или хотите получить консультацию европейского эксперта – мы сделаем все, чтобы Вы могли восстановить свое здоровье и остались довольны нашим сервисом. Среди наших партнеров в Москве и Европе лишь те, чье качество лечения и чуткое отношение к пациенту уже подтверждены многолетним опытом и рекомендациями. Все специалисты клиник-партнеров работают в системе преемственности методов лечения. Нуждаетесь ли Вы в быстрой и качественной медицинской помощи в Москве или хотите получить консультацию европейского эксперта – мы сделаем все, чтобы Вы могли восстановить свое здоровье и остались довольны нашим сервисом. Среди наших партнеров в Москве и Европе лишь те, чье качество лечения и чуткое отношение к пациенту уже подтверждены многолетним опытом и рекомендациями. Все специалисты клиник-партнеров работают в системе преемственности методов лечения.
+						</p>
+					</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

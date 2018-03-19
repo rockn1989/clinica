@@ -1,1 +1,107 @@
 /* MODALS WINDOW */
+
+.uk-modal {
+	//background: rgba(255, 255, 255, .3);
+}
+
+.default-modal {
+	.uk-modal-dialog {
+		position: relative;
+		padding: 80px 0;
+		.blockShadow();
+		width: 650px;
+	}
+	.uk-modal-header {
+		padding: 0 12.3%;
+		.title {
+			position: relative;
+			margin-bottom: 60px;
+			padding-right: 30%;
+			color: #2a3246;
+			font-size: 36px;
+			line-height: 42px;
+			font-weight: 700;
+			letter-spacing: 0.77px;
+			font-family: @mainFont;
+			text-transform: uppercase;
+			&:after {
+				position: absolute;
+				top: 5px;
+				right: 0;
+				color: #ff0043;
+				font-size: 66px;
+				content: "\e902";
+			  font-family: 'icomoon' !important;
+			  speak: none;
+			  font-style: normal;
+			  font-weight: normal;
+			  font-variant: normal;
+			  text-transform: none;
+			  line-height: 1;
+
+			  /* Better Font Rendering =========== */
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+		.uk-modal-close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 16px;
+			text-decoration: none;
+			opacity: 1;
+			color: #2a3246;
+			border-radius: 50%;
+			.blockShadow();
+			&:hover {
+				box-shadow: 0 0 14px 5px #d7e3e9;
+			}
+		}
+	}
+	.uk-modal-body {
+		padding: 0 12.3%;
+	}
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		margin-bottom: 30px;
+	}
+  input[type="text"] {
+  	margin-bottom: 20px;
+    position: relative;
+    padding-left: 3%;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 13px #d7e3e9;
+    border: 1px solid #e7f2f8;
+    border-radius: 100px;
+    transition: all .3s ease;
+    font-size: 16px;
+    &::placeholder {
+    	color: #9b9b9b;
+    }
+    &:focus {
+    	border: 1px solid #ff0043 !important;
+    	box-shadow: 0 3px 13px #d7e3e9 !important;
+    	& ~ button {
+    		background-color: #ff0043;
+    	}
+    }
+    &:hover {
+    	border: 1px solid #293146;
+    }
+  }
+  .modal-btn {
+		margin-top: 30px;
+		min-width: 162px;
+  }
+}
