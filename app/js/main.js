@@ -148,7 +148,7 @@ $('.about-company-slider').slick({
 
 	initPlayer();
 
-	// CUSTOM SELECT
+	/* CUSTOM SELECT */
 
 	function formatState (state) {
 	  if (!state.id) {
@@ -159,7 +159,7 @@ $('.about-company-slider').slick({
 	  } else {
 	    var $state = $('<div>' + state.text + '!</div>');
 	  }
-	  
+
 	  return $state;
 	};
 
@@ -167,5 +167,6 @@ $('.about-company-slider').slick({
 	  placeholder: "Выберите специалиста",
 	  minimumResultsForSearch: -1
 	});
+
 
 });

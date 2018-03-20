@@ -3,6 +3,9 @@
 .footer {
 	padding: 70px 0;
 	background-color: #293146;
+	@media @mob-w {
+		padding: 60px 0 30px;
+	}
 	&__title {
 		color: #ffffff;
 		font-size: 18px;
@@ -11,6 +14,9 @@
 	}
 	&__add-info {
 		margin-bottom: 70px;
+		@media @tablet-w {
+			margin-bottom: 30px;
+		}
 		a {
 			font-size: 18px;
 			font-weight: 700;
@@ -30,12 +36,18 @@
 		letter-spacing: .4px;
 	}
 	.page-form-search {
+		@media @mob-w {
+			display: none;
+		}
 		input {
 			box-shadow: none;
 		}
 	}
 	a {
 		color: #ffffff;
+		@media @mob-w {
+			display: block;
+		}
 		&:hover {
 			color: #dd0039;
 		}

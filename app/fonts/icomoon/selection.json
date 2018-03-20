@@ -10,11 +10,14 @@
         "grid": 0,
         "tags": [
           "arrow-down-icon"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 6,
+        "order": 29,
         "id": 9,
         "name": "arrow-down-icon",
         "prevSize": 32,
@@ -33,11 +36,14 @@
         "grid": 0,
         "tags": [
           "arrow-up-icon"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 7,
+        "order": 30,
         "id": 8,
         "name": "arrow-up-icon",
         "prevSize": 32,
@@ -56,11 +62,14 @@
         "grid": 0,
         "tags": [
           "doctor-symbol"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 8,
+        "order": 31,
         "id": 7,
         "name": "doctor-symbol",
         "prevSize": 32,
@@ -79,11 +88,14 @@
         "grid": 0,
         "tags": [
           "faceboook"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 9,
+        "order": 32,
         "id": 6,
         "name": "faceboook",
         "prevSize": 32,
@@ -104,11 +116,14 @@
         "grid": 0,
         "tags": [
           "instagram"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 10,
+        "order": 33,
         "id": 5,
         "name": "instagram",
         "prevSize": 32,
@@ -127,11 +142,14 @@
         "grid": 0,
         "tags": [
           "pick"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 11,
+        "order": 34,
         "id": 4,
         "name": "pick",
         "prevSize": 32,
@@ -150,11 +168,14 @@
         "grid": 0,
         "tags": [
           "right-arrow-icon"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 12,
+        "order": 35,
         "id": 3,
         "name": "right-arrow-icon",
         "prevSize": 32,
@@ -173,11 +194,14 @@
         "grid": 0,
         "tags": [
           "search"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 13,
+        "order": 36,
         "id": 2,
         "name": "search",
         "prevSize": 32,
@@ -196,11 +220,14 @@
         "grid": 0,
         "tags": [
           "telephone"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 14,
+        "order": 37,
         "id": 1,
         "name": "telephone",
         "prevSize": 32,
@@ -219,11 +246,14 @@
         "grid": 0,
         "tags": [
           "vk"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": []
+        }
       },
       "attrs": [],
       "properties": {
-        "order": 15,
+        "order": 38,
         "id": 0,
         "name": "vk",
         "prevSize": 32,
@@ -249,7 +279,14 @@
         "grid": 0,
         "tags": [
           "left-arrow-icon"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": [
+            {
+              "f": 0
+            }
+          ]
+        }
       },
       "attrs": [
         {
@@ -257,7 +294,7 @@
         }
       ],
       "properties": {
-        "order": 5,
+        "order": 39,
         "id": 10,
         "name": "left-arrow-icon",
         "prevSize": 32,
@@ -284,7 +321,14 @@
         "grid": 0,
         "tags": [
           "menu"
-        ]
+        ],
+        "colorPermutations": {
+          "23124224812552552551": [
+            {},
+            {},
+            {}
+          ]
+        }
       },
       "attrs": [
         {},
@@ -292,7 +336,7 @@
         {}
       ],
       "properties": {
-        "order": 16,
+        "order": 27,
         "id": 11,
         "name": "menu",
         "prevSize": 32,
@@ -301,6 +345,80 @@
       "setIdx": 0,
       "setId": 2,
       "iconIdx": 11
+    },
+    {
+      "icon": {
+        "paths": [
+          "M11.815 551.385c-7.877-7.877-11.815-19.692-11.815-27.569s3.938-19.692 11.815-27.569l55.138-55.138c15.754-15.754 39.385-15.754 55.138 0l3.938 3.938 216.615 232.369c7.877 7.877 19.692 7.877 27.569 0l527.754-547.446 3.938-0c15.754-15.754 39.385-15.754 55.138 0l55.138 55.138c15.754 15.754 15.754 39.385 0 55.138v0l-630.154 653.785c-7.877 7.877-15.754 11.815-27.569 11.815s-19.692-3.938-27.569-11.815l-307.2-330.831-7.877-11.815z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(255, 255, 255)"
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "checked"
+        ],
+        "colorPermutations": {
+          "23124224812552552551": [
+            {
+              "f": 1
+            }
+          ]
+        }
+      },
+      "attrs": [
+        {
+          "fill": "rgb(255, 255, 255)"
+        }
+      ],
+      "properties": {
+        "order": 26,
+        "id": 12,
+        "name": "checked",
+        "prevSize": 32,
+        "code": 59660
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 12
+    },
+    {
+      "icon": {
+        "paths": [
+          "M800.34 488.396l-478.15-478.129c-6.843-6.835-14.717-10.267-23.604-10.267-8.891 0-16.761 3.432-23.6 10.267l-51.294 51.305c-6.85 6.839-10.26 14.695-10.26 23.6s3.411 16.761 10.26 23.6l403.238 403.238-403.238 403.245c-6.85 6.839-10.26 14.709-10.26 23.59 0 8.902 3.411 16.772 10.26 23.611l51.298 51.287c6.839 6.846 14.709 10.257 23.6 10.257 8.887 0 16.758-3.418 23.6-10.257l478.125-478.132c6.835-6.835 10.257-14.709 10.257-23.6s-3.396-16.761-10.232-23.615z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "angle-arrow-pointing-to-right"
+        ],
+        "colorPermutations": {
+          "23124224812552552551": [
+            {}
+          ]
+        }
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 28,
+        "id": 13,
+        "name": "mobile-arrow-right",
+        "prevSize": 32,
+        "code": 59661
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 13
     }
   ],
   "height": 1024,

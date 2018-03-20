@@ -70,7 +70,7 @@ gulp.task("serve", ["templates", "less", "svgstore"], function() {
 });
 
 gulp.task('dev', function() {
-  gulp.watch("app/templates/**/*.html", ["templates"]);
+  gulp.watch("app/templates/**/*.html", ["templates"], browserSync.reload);
 });
 
 gulp.task("images", function() {

@@ -5,6 +5,9 @@
 		padding: 35px 0;
 		.soc-links {
 			padding: 12px 20px;
+			@media (min-width: 960px) and (max-width: 1085px) {
+				padding: 12px 5px;
+			}
 		}
 	}
 	&__bottom {
@@ -36,6 +39,9 @@
 	}
 	&__address {
 		padding: 6px 0;
+		@media (min-width: 960px) and (max-width: 1085px) {
+			font-size: 14px;
+		}
 		a {
 			position: relative;
 			padding-left: 15px;
@@ -132,6 +138,10 @@
 	font-size: 17px;
 	font-weight: 700;
 	text-decoration: none;
+	@media (min-width: 960px) and (max-width: 1085px) {
+		font-size: 14px;
+	}
+
 }
 
 
@@ -151,6 +161,95 @@
 			text-decoration: none;
 			&:hover {
 				color: #dd0039;
+			}
+		}
+	}
+}
+
+/* HEADER MOBILE */
+
+.header-mobile {
+	padding: 20px 0 0;
+	a.menu {
+		display: inline-block;
+		width: 35px;
+		height: 25px;
+		color: #ff0043;
+		font-size: 28px;
+		text-decoration: none;
+	}
+	a.btn.btn--fill {
+		padding: 0;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		&:before {
+			position: static;
+			display: inline;
+			line-height: inherit;
+		}
+	}
+	.search-form {
+		display: block;
+	}
+	.mobile-tel {
+		margin: 30px 0 20px;
+		text-align: center;
+		a.main-tel {
+			position: relative;
+			padding-left: 26px;
+			color: #000000;
+			font-size: 21px;
+			font-weight: 700;
+			font-family: @mainFont !important;
+			&:before {
+				position: absolute;
+				top: 5px;
+				left: 0;
+				font-size: 15px;
+				font-family: 'icomoon' !important;
+				color: #ff0043;
+			}
+		}
+	}
+	.mobile-search {
+		.search-form {
+			padding-right: 0;
+			&__btn {
+				width: 40px;
+			}
+			input {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+
+.uk-offcanvas {
+	&-bar {
+		background-color: #ffffff;
+	}
+	.uk-panel {
+		.uk-nav {
+			li {
+				&.uk-active {
+					a {
+						color: #ff0043;
+					}
+				}
+			}
+			a {
+				color: #000000;
+				font-size: 18px;
+				font-weight: 700;
+				&:hover {
+					color: #ff7e9f;
+				}
+				&.uk-active {
+
+				}
 			}
 		}
 	}

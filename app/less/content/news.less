@@ -24,6 +24,9 @@
 		border: 1px solid #e7f2f8;
 		background-color: #ffffff;
 		transition: box-shadow .3s ease;
+		@media @mob-w {
+			width: 100%;
+		}
 		@media @desk-w {
 			&:nth-last-child(-n+4) {
 				margin-bottom: 0;
@@ -47,6 +50,9 @@
 	&__img {
 		max-height: 140px;
 		text-align: center;
+		@media @mob-w {
+			display: none;
+		}
 		a {
 			position: relative;
 			display: block;
@@ -60,6 +66,9 @@
 		padding: 12px 9%;
 		font-size: 10px;
 		color: #8f96a0;
+		@media @mob-w {
+			font-size: 18px;
+		}
 	}
 	&__date,
 	&__promo {
@@ -90,6 +99,10 @@
 		color: #9b9b9b;
 		font-size: 10px;
 		line-height: 14px;
+		@media @mob-w {
+			font-size: 14px;
+			line-height: 21px;
+		}
 	}
 }
 

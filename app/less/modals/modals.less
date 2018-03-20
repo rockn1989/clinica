@@ -70,7 +70,7 @@
 		margin: 0;
 		padding: 0;
 		border: none;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
   input[type="text"] {
   	margin-bottom: 20px;
@@ -99,9 +99,12 @@
     &:hover {
     	border: 1px solid #293146;
     }
+    &:last-child {
+    	margin-bottom: 0;
+    }
   }
   .modal-btn {
-		margin-top: 30px;
+		margin-top: 40px;
 		min-width: 162px;
   }
 	.custom-input__wrapper {
@@ -124,17 +127,27 @@
 			padding: 0 30px;
 			height: 40px;
 			transition: none;
+			background: url('../img/icon-svg/arrow-down-icon.svg') right 20px center no-repeat;
 			&:focus {
+				background: url('../img/icon-svg/arrow-up-icon.svg') right 20px center no-repeat;
 				border-color: #293146 !important;
 				border-radius: 20px 20px 0 0;
-
+				border-bottom: none !important;
 			}
+		}
+		&:hover {
+			cursor: pointer;
+			input[type="text"] {
+				cursor: pointer;
+			}
+		}
+		&.open {
 		}
 	}
 	.uk-dropdown-small {
 		padding: 0;
 		border: 1px solid #293146;
-		border-top: 0;
+		border-top: 1px solid #e7f2f8;
 		width: 100% !important;
 		background-color: #ffffff;
 	}
@@ -143,12 +156,7 @@
 			input {
 				border-color: #293146;
 				border-radius: 20px 20px 0 0;
-			}
-			~ i {
-				&:before {
-					content: "\e901";
-					color: #8f96a0;
-				}
+				border-bottom: none;
 			}
 		}
 		li {
@@ -162,6 +170,9 @@
 }
 
 .uk-datepicker {
+	border: 1px solid #293146;
+	border-top: 1px solid #e7f2f8;
+	max-width: 236px;
 	background: #ffffff;
 	a {
 		&:hover {
@@ -170,6 +181,15 @@
 		}
 		&.uk-active {
 			background-color: #ff0043;
+		}
+	}
+	&.uk-dropdown {
+		padding: 15px 7px;
+	}
+	.uk-datepicker-nav a{
+		color: #ff0043;
+		&:hover {
+			background: transparent;
 		}
 	}
 }
