@@ -1728,6 +1728,65 @@ button.btn.icon-doctor-symbol:before {
   margin-top: 30px;
   min-width: 162px;
 }
+.default-modal .custom-input__wrapper {
+  margin-bottom: 20px;
+  position: relative;
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+.default-modal .custom-input__wrapper:nth-child(1) {
+  margin-right: 3%;
+}
+.default-modal .custom-input__wrapper i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #ff0043;
+}
+.default-modal .custom-input__wrapper input[type="text"] {
+  margin-bottom: 0;
+  padding: 0 30px;
+  height: 40px;
+  -webkit-transition: none;
+  -o-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+.default-modal .custom-input__wrapper input[type="text"]:focus {
+  border-color: #293146 !important;
+  -webkit-border-radius: 20px 20px 0 0;
+          border-radius: 20px 20px 0 0;
+}
+.default-modal .uk-dropdown-small {
+  padding: 0;
+  border: 1px solid #293146;
+  border-top: 0;
+  width: 100% !important;
+  background-color: #ffffff;
+}
+.default-modal .uk-autocomplete.uk-open input {
+  border-color: #293146;
+  -webkit-border-radius: 20px 20px 0 0;
+          border-radius: 20px 20px 0 0;
+}
+.default-modal .uk-autocomplete.uk-open ~ i:before {
+  content: "\e901";
+  color: #8f96a0;
+}
+.default-modal .uk-autocomplete li.uk-active a {
+  background-color: #ff0043;
+}
+.uk-datepicker {
+  background: #ffffff;
+}
+.uk-datepicker a:hover {
+  color: #ffffff;
+  background-color: #f6aec1;
+}
+.uk-datepicker a.uk-active {
+  background-color: #ff0043;
+}
 /* FORMS */
 .search-form {
   position: relative;
@@ -1878,4 +1937,94 @@ button.btn.icon-doctor-symbol:before {
 }
 .page-form-search:hover button {
   background-color: #293146;
+}
+/* CUSTOM SELECT */
+.select2-container--default {
+  width: 100% !important;
+  height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 13px #d7e3e9;
+          box-shadow: 0 3px 13px #d7e3e9;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.select2-container--default.select2-container--open {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.select2-container--default.select2-container--open .select2-selection--single {
+  border: 1px solid #293146;
+  border-bottom: 1px solid #e7f2f8;
+  -webkit-border-radius: 20px 20px 0 0 !important;
+          border-radius: 20px 20px 0 0 !important;
+  outline: none;
+}
+.select2-container--default.select2-container--open .select2-selection__arrow:before {
+  color: #8f96a0;
+  content: '\e901';
+}
+.select2-container--default .select2-selection--single {
+  height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 0 5%;
+  border: 1px solid #e7f2f8;
+  outline: none;
+}
+.select2-container--default .select2-selection__rendered {
+  height: 40px;
+  line-height: 40px !important;
+}
+.select2-container--default .select2-selection__arrow {
+  right: 15px !important;
+}
+.select2-container--default .select2-selection__arrow:before {
+  content: "\e900";
+  color: #ff0043;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.select2-container--default .select2-selection__arrow b {
+  display: none;
+}
+.select2-dropdown {
+  padding-right: 1px;
+  border: 1px solid #293146;
+  border-top: none;
+}
+.select2-results__option {
+  padding: 0 7%;
+  color: #2a3246;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  color: #ffffff;
+  background-color: #ff0043;
+}
+/* END CUSTOM SELECT */
+.custom-input:before {
+  content: "\e900";
+  color: #ff0043;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

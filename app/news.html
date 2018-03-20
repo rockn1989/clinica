@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="libs/css/uikit.min.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -24,7 +25,9 @@
 		<script src="libs/placholder.js"></script>
 	<![endif]-->
 </head>
+
 <body>
+
 	<header class="header">
 		<div class="header__top">
 			<div class="uk-container">
@@ -97,13 +100,24 @@
 		</div>
 	</header>
 
+
+
+
 	<div class="content">
 		<div class="content-header">
 			<div class="uk-container">
 				<ul class="breadcrumbs">
-					<li><a href="">Главная</a></li>
-					<li>Новости</li>
-				</ul>
+		
+		
+	<li><a href="">Главная</a></li>
+	
+	
+		
+	<li>Новости</li>
+		
+	
+	</ul>
+
 				<h1 class="uk-margin-small-bottom">Новости</h1>
 			</div>
 		</div>
@@ -209,6 +223,8 @@
 		</div>
 	</div>
 
+
+
 	<footer class="footer">
 		<div class="uk-container">
 			<form action="" class="page-form-search">
@@ -291,6 +307,8 @@
 	</footer>
 
 
+
+
 <div id="callback-modal" class="uk-modal default-modal">
 	<div class="uk-modal-dialog">
 		<div class="uk-modal-header">
@@ -305,8 +323,22 @@
 					<input type="text" placeholder="E-mail">
 				</fieldset>
 				<fieldset>
-					<input type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
-					<input type="text" data-uk-timepicker="{format:'24h'}">
+					<div class="custom-input__wrapper">
+						<input type="text" class="custom-input" data-uk-datepicker="{format:'DD.MM.YYYY',weekstart: 0, i18n:{months:['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], weekdays: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс']}}" placeholder="Дата">
+						<i class="icon-arrow-down-icon"></i>
+					</div>
+					<div class="custom-input__wrapper">
+						<input type="text" class="custom-input" data-uk-timepicker="{format:'24h', start: 8, end: 21}" placeholder="Время">
+						<i class="icon-arrow-down-icon"></i>
+					</div>
+					<select name="" id="" class="customSelect js__custom-select">
+						<option value="" class="placeholder"></option>
+						<option value="Петров Павел Юрьевич">Петров Павел Юрьевич</option>
+						<option value="Петров Павел Юрьевич">Петров Павел Юрьевич</option>
+						<option value="Петров Павел Юрьевич">Петров Павел Юрьевич</option>
+						<option value="Петров Павел Юрьевич">Петров Павел Юрьевич</option>
+						<option value="Петров Павел Юрьевич">Петров Павел Юрьевич</option>
+					</select>
 				</fieldset>
 				<label for="politics">
 					<input type="checkbox" id="politics">
@@ -320,13 +352,17 @@
 </div>
 
 
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 	<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 	<script src="libs/js/uikit.min.js" defer></script>
 	<script src="libs/slick/slick.min.js" defer></script>
+	<script src="libs/select2/select2.min.js" defer></script>
 	<script src="libs/svg4everybody.min.js" defer></script>
 	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 	<script src="js/main.js" defer></script>
+
 
 </body>
 </html>
