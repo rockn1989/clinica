@@ -13,14 +13,14 @@
 	}
 	&__name {
 		float: left;
-		color: #9b9b9b;
+		color: #2a3246;
 		line-height: 21px;
 	}
 	&__value {
 		float: right;
 	}
 	&__price {
-		color: #000000;
+		color: #2a3246;
 		font-weight: 700;
 	}
 	&__arrow {
@@ -36,14 +36,15 @@
 		.service-coast__arrow {
 			display: block;
 			cursor: pointer;
-		}
-		&.open {
-			.service-coast__arrow {
+			transition: all .3s ease;
+			&.open {
+				transform: rotate(180deg);
 				&:before {
 					color: #8f96a0;
-					content: '\e901';
 				}
 			}
+		}
+		&.open {
 			.service-coast__sublist {
 				display: block;
 			}
