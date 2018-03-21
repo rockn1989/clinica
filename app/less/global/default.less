@@ -1,40 +1,40 @@
 body,
 table {
-  font-family: @mainFont;
-  font-size: @fontSize;
-  line-height: @lineHeight;
-  font-weight: @fontWeight;
-  color: #8f96a0;
+	font-family: @mainFont;
+	font-size: @fontSize;
+	line-height: @lineHeight;
+	font-weight: @fontWeight;
+	color: #8f96a0;
 }
 
 body {
 	a {
 		color: #8f96a0;
-	  text-decoration: underline;
-	  transition: all .3s linear;
-	  &:hover {
-	  	color: #2a3246;
-	  }
-	  &.black {
+		text-decoration: underline;
+		transition: all .3s linear;
+		&:hover {
+			color: #2a3246;
+		}
+		&.black {
 			color: #2a3246;
 			&:hover {
 				color: #000000;
 			}
-	  }
-	  &.pink {
-	  	color: #ff0044;
+		}
+		&.pink {
+			color: #ff0044;
 			&:hover {
 				color: #d0021b;
 			}
-	  }
-	  &.bold {
-	  	font-weight: 700;
-	  }
+		}
+		&.bold {
+			font-weight: 700;
+		}
 	}
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5 {
@@ -48,11 +48,17 @@ h1,h2,h3,h4,h5 {
 h1 {
 	margin-bottom: 25px;
 	.text-size(36px,42px);
+	@media @mob-w {
+		.text-size(24px, 28px);
+	}
 }
 
 h2 {
 	margin-bottom: 25px;
 	.text-size(28px,34px);
+	@media @mob-w {
+		.text-size(21px, 28px);
+	}
 }
 
 h3 {
@@ -65,15 +71,18 @@ h4 {
 
 
 svg {
-  transition: fill .3s linear;
+	transition: fill .3s linear;
 }
 
 .uk-container {
-  margin: 0 auto;
-  max-width: @containerWidth;
-  @media @desk-w {
-    padding: 0 15px;
-  }
+	margin: 0 auto;
+	max-width: @containerWidth;
+	@media @mob-w {
+		padding: 0 10px;
+	}
+	@media (min-width: 480px) {
+		padding: 0 15px;
+	}
 }
 
 
@@ -143,17 +152,17 @@ button.btn {
 			opacity: 0;
 			transition: all .4s ease;
 			content: '\e906';
-		  font-family: 'icomoon' !important;
-		  speak: none;
-		  font-style: normal;
-		  font-weight: normal;
-		  font-variant: normal;
-		  text-transform: none;
-		  line-height: 1;
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
 
-		  /* Better Font Rendering =========== */
-		  -webkit-font-smoothing: antialiased;
-		  -moz-osx-font-smoothing: grayscale;
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 		}
 		&:hover {
 			padding-right: 45px;
@@ -180,19 +189,35 @@ button.btn {
 		padding-left: 45px;
 		font-family: @mainFont !important;
 		&:before {
-	    position: absolute;
-	    top: 50%;
-	    left: 10%;
-	    display: block;
-	    font-size: 18px;
-	    line-height: 1;
-	    font-family: 'icomoon' !important;
-	    font-weight: 400;
-	    transform: translateY(-50%);
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			display: block;
+			font-size: 18px;
+			line-height: 1;
+			font-family: 'icomoon' !important;
+			font-weight: 400;
+			transform: translateY(-50%);
 		}
 	}
 }
 
-.test {
-	.blockShadow();
+
+html.uk-touch {
+	body {
+		*.uk-invisible {
+			display: block !important;
+			opacity: 1 !important;
+			animation: none !important;
+			visibility: visible !important;
+		}
+		[class*=uk-animation-] {
+			@media @mob-w {
+				animation: none;
+			}
+			@media @tablet-w {
+				animation: none;
+			}
+		}
+	}
 }

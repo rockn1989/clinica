@@ -1,6 +1,9 @@
 /* PAGE HEADER */
 
 .header {
+	@media @tablet-w {
+		margin-bottom: 40px;
+	}
 	&__top {
 		padding: 35px 0;
 		.soc-links {
@@ -13,7 +16,6 @@
 	&__bottom {
 		padding: 10px 0;
 		background-color: #f8f7e7;
-		box-shadow: 0 4px 13px #d7e3e9;
 		a.btn {
 			margin-top: 0;
 			float: right;
@@ -169,14 +171,20 @@
 /* HEADER MOBILE */
 
 .header-mobile {
-	padding: 20px 0 0;
+	padding: 20px 0;
 	a.menu {
 		display: inline-block;
-		width: 35px;
-		height: 25px;
+		width: 40px;
+		height: 40px;
 		color: #ff0043;
 		font-size: 28px;
 		text-decoration: none;
+		@media (min-width: 370px) {
+			margin-top: 10px;
+		}
+		&:before {
+			font-size: 40px;
+		}
 	}
 	a.btn.btn--fill {
 		padding: 0;
@@ -184,6 +192,9 @@
 		height: 40px;
 		line-height: 40px;
 		text-align: center;
+		@media (min-width: 370px) {
+			margin-top: 10px;
+		}
 		&:before {
 			position: static;
 			display: inline;

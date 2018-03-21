@@ -2,7 +2,7 @@
 
 .service-coast-wrapper {
 	margin-bottom: 65px;
-	.blockShadow();
+	box-shadow: 0 5px 13px #d7e3e9;
 }
 
 .service-coast {
@@ -10,14 +10,26 @@
 		.clearfix();
 		padding: 20px 35px 20px 30px;
 		border-bottom: 1px solid #e7f2f8;
+		@media @mob-w {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 	&__name {
 		float: left;
 		color: #2a3246;
 		line-height: 21px;
+		@media @mob-w {
+			max-width: 70%;
+		}
 	}
 	&__value {
 		float: right;
+		@media @mob-w {
+			//margin-top: 10px;
+			//float: left;
+			//width: 100%;
+		}
 	}
 	&__price {
 		color: #2a3246;

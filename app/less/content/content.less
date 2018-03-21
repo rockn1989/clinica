@@ -14,6 +14,9 @@
 	}
 	h1 {
 		margin-bottom: 45px;
+		@media @mob-w {
+			margin-bottom: 30px;
+		}
 	}
 	h2 {
 		margin-bottom: 10px;
@@ -55,6 +58,10 @@
 		bottom: 0;
 		right: 0;
 		.blockShadow();
+		@media @mob-w {
+			position: static;
+			margin-bottom: 50px	;
+		}
 	}
 }
 
@@ -79,6 +86,9 @@
 	margin-bottom: 50px;
 	list-style: none;
 	color: #293146;
+	@media @mob-w {
+		margin-bottom: 20px;
+	}
 	li {
 		display: inline-block;
 		vertical-align: top;
@@ -107,6 +117,19 @@
 
 .our-staff {
 	padding: 80px 0;
+	@media @mob-w {
+		padding: 60px 0 80px;
+		h2 {
+			text-align: center;
+		}
+		.btn {
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			max-width: 165px;
+			text-align: center;
+		}
+	}
 	&__list {
 		margin: 30px 0;
 		padding: 0;
@@ -118,6 +141,16 @@
 		display: inline-block;
 		vertical-align: top;
 		width: 20%;
+		@media @mob-w {
+			width: 45%;
+			margin-right: 10%;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:nth-last-child(-n+2) {
+				margin-bottom: 0;
+			}
+		}
 		a {
 			color: #2a3246;
 			font-size: 16px;
@@ -128,6 +161,7 @@
 			}
 		}
 	}
+
 }
 
 
@@ -135,22 +169,60 @@
 	background-color: #f8f6e7;
 	.uk-container {
 		position: relative;
-		padding: 65px 0 65px;
+		padding: 65px 15px;
+		@media @mob-w {
+			padding: 30px 10px 0;
+			h2 {
+				text-align: center;
+			}
+			.btn {
+				margin: 0 auto;
+				padding: 0;
+				display: block;
+				max-width: 165px;
+				text-align: center;
+			}
+		}
 	}
 	&__text {
 		margin-bottom: 40px;
 		max-width: 40%;
+		@media @mob-w {
+			max-width: 80%;
+			margin: 0 auto 40px;
+		}
 	}
 	&__img {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		@media @mob-w {
+			position: static;
+	    display: block;
+	    margin: 0 auto;
+		}
+		@media @tablet-w {
+			width: 350px;
+		}
 	}
 }
 
 
 .about-company {
 	padding: 90px 0;
+	@media @mob-w {
+
+		h2 {
+			text-align: center;
+		}
+		.btn {
+			margin: 0 auto;
+			padding: 0;
+			display: block;
+			max-width: 165px;
+			text-align: center;
+		}
+	}
 	&__text {
 		padding-right: 5%;
 		margin-bottom: 40px;
@@ -287,12 +359,20 @@
 
 .partners {
 	padding: 80px 0 50px;
+	@media @mob-w {
+		h2 {
+			text-align: center;
+		}
+	}
 	&__list {
 		margin-top: 50px;
 		font-size: 0;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		@media @mob-w {
+
+		}
 	}
 	&__item {
 		margin-bottom: 30px;
@@ -306,6 +386,19 @@
 		&:nth-child(5n) {
 			text-align: right;
 		}
+		@media @mob-w {
+			text-align: center;
+			width: 100%;
+			img {
+				display: inline;
+			}
+			&:nth-child(1n) {
+				text-align: center;
+			}
+			&:nth-child(5n) {
+				text-align: center;
+			}
+		}
 	}
 }
 
@@ -318,10 +411,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	.staff-card {
-		margin-right: 2.66666%;
 		margin-bottom: 30px;
-		&:nth-child(4n) {
-			margin-right: 0;
+		@media @desk-w {
+			margin-right: 2.66666%;
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
 		}
 	}
 	&.column-3 {
@@ -333,6 +428,10 @@
 			}
 			&:nth-child(3n) {
 				margin-right: 0;
+			}
+			@media @mob-w {
+				width: 100%;
+				margin: 0;
 			}
 		}
 	}
@@ -347,6 +446,16 @@
 	border-radius: 4px;
 	background-color: #ffffff;
 	transition: box-shadow .3s ease;
+	@media @mob-w {
+		width: 100%;
+	}
+	@media @tablet-w {
+		width: 30%;
+		margin-right: 5%;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
 	&:hover {
 		box-shadow: 0 5px 30px #d7e3e9;
 	}
@@ -408,6 +517,9 @@
 		margin-left: 1%;
 		list-style: none;
 		font-size: 21px;
+		@media @mob-w {
+			margin-top: 10px;
+		}
 		li {
 			display: inline-block;
 			a {
@@ -489,6 +601,16 @@
 		display: flex;
 		flex-wrap: wrap;
 		overflow: hidden;
+		@media @mob-w {
+			display: table-cell;
+			height: 140px;
+			vertical-align: middle;
+		}
+		@media @tablet-w {
+			display: table-cell;
+			height: 140px;
+			vertical-align: middle;
+		}
 	}
 	&__name {
 		position: relative;
@@ -508,12 +630,22 @@
 		font-size: 12px;
 		opacity: 0;
 		transition: none;
+		@media @mob-w {
+			position: relative;
+			display: inliblock;
+			opacity: 1;
+		}
+		@media @tablet-w {
+			position: relative;
+			display: inliblock;
+			opacity: 1;
+		}
 		&:after {
 			transition: all .3s ease;
 			content: "\e906";
 			position: absolute;
-			top: 4px;
-			right: 20%;
+			top: 5px;
+			right: 0;
 			display: block;
 			font-size: 12px;
 		  /* use !important to prevent issues with browser extensions that change fonts */
@@ -528,6 +660,9 @@
 		  /* Better Font Rendering =========== */
 		  -webkit-font-smoothing: antialiased;
 		  -moz-osx-font-smoothing: grayscale;
+		  @media @desk-w {
+				right: 20%;
+		  }
 		}
 	}
 	&.grid-4 {
@@ -547,11 +682,13 @@
 				}
 			}
 			@media @tablet-w {
-				&:nth-child(4n) {
+				width: 30%;
+				margin-right: 5%;
+				&:nth-child(3n) {
 					margin-right: 0;
 				}
-				&:nth-child(5n) {
-					margin-right: 2.6666%;
+				&:nth-child(4n) {
+					margin-right: 5%;
 				}
 			}
 			@media @desk-w {
@@ -568,17 +705,58 @@
 
 
 .directions-filter {
+	position: relative;
+	@media @mob-w {
+		margin: 0 -10px;
+		padding: 15px 10px;
+		&.open {
+			background-color: #e7f2f8;
+		}
+	}
 	&__title {
 		margin-bottom: 35px;
 		color: #2a3246;
 		font-size: 21px;
 		font-weight: 700;
 		line-height: 21px;
+		@media @mob-w {
+			position: relative;
+			margin-bottom: 10px;
+			padding-right: 25px;
+			display: inline-block;
+			vertical-align: top;
+			&:before {
+				position: absolute;
+				right: 0;
+				content: "\e90f";
+			  /* use !important to prevent issues with browser extensions that change fonts */
+			  font-family: 'icomoon' !important;
+			  speak: none;
+			  font-style: normal;
+			  font-weight: normal;
+			  font-variant: normal;
+			  text-transform: none;
+			  line-height: 1;
+
+			  /* Better Font Rendering =========== */
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			}
+		}
 	}
 	&__list {
 		margin: 0;
 		padding: 0;
+		display: block;
 		list-style: none;
+		@media @mob-w {
+			position: absolute;
+			left: 0;
+			padding: 10px;
+			width: 100%;
+			background-color:  #e7f2f8;
+			display: none;
+		}
 		a {
 			text-decoration: none;
 			&:hover {
@@ -639,6 +817,13 @@
 
 .promo-sidebar {
 	padding: 0 10%;
+	@media @mob-w {
+		margin-top: 50px;
+		padding: 0;
+	}
+	@media @tablet-w {
+		padding: 0;
+	}
 	img {
 		margin-bottom: 30px;
 	}

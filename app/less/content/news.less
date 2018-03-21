@@ -1,13 +1,25 @@
 /* NEWS */
 
 .news {
+	@media @mob-w {
+		h2 {
+			text-align: center;
+		}
+	}
 	.uk-container {
 		position: relative;
 	}
-	.btn {
+	.btn.btn--gray {
 		position: absolute;
 		top: -5px;
 		right: 15px;
+		@media @mob-w {
+			position: static;
+			margin: 30px auto 0;
+			display: block;
+			max-width: 165px;
+			text-align: center;
+		}
 	}
 	&__list {
 		font-size: 0;
@@ -24,17 +36,6 @@
 		border: 1px solid #e7f2f8;
 		background-color: #ffffff;
 		transition: box-shadow .3s ease;
-		@media @mob-w {
-			width: 100%;
-		}
-		@media @desk-w {
-			&:nth-last-child(-n+4) {
-				margin-bottom: 0;
-			}
-			&:nth-child(4n) {
-				margin-right: 0;
-			}
-		}
 		&:last-child {
 			margin-right: 0;
 		}
@@ -46,6 +47,28 @@
 			margin-left: 9%;
 			margin-bottom: 0;
 		}
+		@media @mob-w {
+			width: 100%;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media @tablet-w {
+			margin-right: 5%;
+			width: 30%;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+		@media @desk-w {
+			&:nth-last-child(-n+4) {
+				margin-bottom: 0;
+			}
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+
 	}
 	&__img {
 		max-height: 140px;
@@ -113,6 +136,9 @@
 	margin-top: -40px;
 	&__banner {
 		margin-bottom: 60px;
+		@media @mob-w {
+			margin-bottom: 40px;
+		}
 		img {
 			max-width: 100%;
 		}
@@ -126,11 +152,14 @@
 		margin-bottom: 50px;
 		font-size: 36px;
 		line-height: 42px;
+		@media @mob-w {
+			margin-bottom: 30px;
+		}
 	}
 	&__promo-title {
 		margin-bottom: 50px;
 		color: #2a3246;
 		font-size: 24px;
-		line-height: 21px;
+		line-height: 26px;
 	}
 }
