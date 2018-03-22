@@ -760,7 +760,7 @@ html.uk-touch body *.uk-invisible {
     margin: 0 auto;
     padding: 0;
     display: block;
-    max-width: 165px;
+    max-width: 195px;
     text-align: center;
   }
 }
@@ -815,7 +815,7 @@ html.uk-touch body *.uk-invisible {
     margin: 0 auto;
     padding: 0;
     display: block;
-    max-width: 165px;
+    max-width: 195px;
     text-align: center;
   }
 }
@@ -857,7 +857,7 @@ html.uk-touch body *.uk-invisible {
     margin: 0 auto;
     padding: 0;
     display: block;
-    max-width: 165px;
+    max-width: 195px;
     text-align: center;
   }
 }
@@ -1200,6 +1200,12 @@ html.uk-touch body *.uk-invisible {
   color: #2a3246;
   text-decoration: none;
 }
+.services-filter__list li a.disabled {
+  color: #8f96a0;
+}
+.services-filter__list li a.disabled:hover {
+  text-decoration: none;
+}
 .services-list-title {
   margin-bottom: 45px;
 }
@@ -1262,11 +1268,6 @@ html.uk-touch body *.uk-invisible {
     margin-right: 2.66666%;
   }
   .services-list__item:nth-child(4n) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 960px) {
-  .services-list__item:nth-child(5n) {
     margin-right: 0;
   }
 }
@@ -1415,7 +1416,13 @@ html.uk-touch body *.uk-invisible {
     padding: 15px 10px;
   }
   .directions-filter.open {
-    background-color: #e7f2f8;
+    background-color: #ff0043;
+  }
+  .directions-filter.open .directions-filter__title {
+    color: #ffffff;
+  }
+  .directions-filter.open .directions-filter__title:before {
+    content: '✖';
   }
 }
 .directions-filter__title {
@@ -1450,6 +1457,11 @@ html.uk-touch body *.uk-invisible {
     -moz-osx-font-smoothing: grayscale;
   }
 }
+@media (min-width: 600px) {
+  .directions-filter__title {
+    width: 100%;
+  }
+}
 .directions-filter__list {
   margin: 0;
   padding: 0;
@@ -1462,8 +1474,11 @@ html.uk-touch body *.uk-invisible {
     left: 0;
     padding: 10px;
     width: 100%;
-    background-color: #e7f2f8;
+    background-color: #ff0043;
     display: none;
+  }
+  .directions-filter__list a {
+    color: #ffffff;
   }
 }
 .directions-filter__list a {
@@ -1659,7 +1674,7 @@ html.uk-touch body *.uk-invisible {
     position: static;
     margin: 30px auto 0;
     display: block;
-    max-width: 165px;
+    max-width: 195px;
     text-align: center;
   }
 }
@@ -1694,7 +1709,7 @@ html.uk-touch body *.uk-invisible {
           box-shadow: 0 3px 13px #d7e3e9;
 }
 .news__item .btn {
-  position: static;
+  position: relative;
   margin-left: 9%;
   margin-bottom: 0;
 }
@@ -1995,6 +2010,8 @@ html.uk-touch body *.uk-invisible {
   font-size: 18px;
   line-height: 24px;
   max-width: 50%;
+  max-height: 120px;
+  overflow: hidden;
 }
 @media (min-width: 768px) and (max-width: 959px) {
   .main-slider .slide__text {
@@ -2136,6 +2153,11 @@ html.uk-touch body *.uk-invisible {
           box-shadow: 0 3px 13px #d7e3e9;
   width: 650px;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal .uk-modal-dialog {
+    padding: 40px 0;
+  }
+}
 .default-modal .uk-modal-header {
   padding: 0 12.3%;
 }
@@ -2169,6 +2191,16 @@ html.uk-touch body *.uk-invisible {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal .uk-modal-header .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .default-modal .uk-modal-header .title:after {
+    font-size: 30px;
+  }
+}
 .default-modal .uk-modal-header .uk-modal-close {
   position: absolute;
   top: 15px;
@@ -2192,6 +2224,11 @@ html.uk-touch body *.uk-invisible {
 }
 .default-modal .uk-modal-body {
   padding: 0 12.3%;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal .uk-modal-body {
+    padding: 0 5%;
+  }
 }
 .default-modal fieldset {
   margin: 0;
@@ -2218,6 +2255,11 @@ html.uk-touch body *.uk-invisible {
   -moz-transition: all .3s ease;
   transition: all .3s ease;
   font-size: 16px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal input[type="text"] {
+    padding: 0 30px;
+  }
 }
 .default-modal input[type="text"]::-webkit-input-placeholder {
   color: #9b9b9b;
@@ -2294,12 +2336,22 @@ html.uk-touch body *.uk-invisible {
 .default-modal .custom-input__wrapper:hover input[type="text"] {
   cursor: pointer;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal .custom-input__wrapper {
+    width: 100%;
+  }
+}
 .default-modal .uk-dropdown-small {
   padding: 0;
   border: 1px solid #293146;
   border-top: 1px solid #e7f2f8;
   width: 100% !important;
   background-color: #ffffff;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .default-modal .uk-autocomplete {
+    width: 100%;
+  }
 }
 .default-modal .uk-autocomplete.uk-open input {
   border-color: #293146;
@@ -2310,11 +2362,26 @@ html.uk-touch body *.uk-invisible {
 .default-modal .uk-autocomplete li.uk-active a {
   background-color: #ff0043;
 }
+.default-modal label.error {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  display: block !important;
+  color: #ff0043;
+}
+.callback-modal .uk-modal-header .title {
+  padding-right: 0;
+}
 .uk-datepicker {
   border: 1px solid #293146;
   border-top: 1px solid #e7f2f8;
   max-width: 236px;
   background: #ffffff;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .uk-datepicker {
+    max-width: 100%;
+    width: 270px;
+  }
 }
 .uk-datepicker a:hover {
   color: #ffffff;
@@ -2514,12 +2581,23 @@ html.uk-touch body *.uk-invisible {
 .select2-container--default {
   width: 100% !important;
   height: 40px;
+  max-width: 100%;
   line-height: 40px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
   outline: none;
   -webkit-box-shadow: 0 3px 13px #d7e3e9;
           box-shadow: 0 3px 13px #d7e3e9;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .select2-container--default {
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .select2-container--default {
+    max-width: 500px;
+  }
 }
 .select2-container--default.select2-container--open {
   -webkit-box-shadow: none !important;
@@ -2613,9 +2691,9 @@ html.uk-touch body *.uk-invisible {
 }
 .custom-checkbox .custom-checkbox {
   position: relative;
-  margin-right: 15px;
   display: inline-block;
   vertical-align: top;
+  float: left;
   width: 20px;
   height: 20px;
   line-height: 20px;
@@ -2646,6 +2724,8 @@ html.uk-touch body *.uk-invisible {
   cursor: pointer;
 }
 .custom-checkbox .custom-label {
+  margin-left: 35px;
+  display: block;
   overflow: hidden;
   color: #9b9b9b;
   font-size: 14px;

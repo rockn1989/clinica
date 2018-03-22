@@ -1,15 +1,14 @@
 /* MODALS WINDOW */
 
-.uk-modal {
-	//background: rgba(255, 255, 255, .3);
-}
-
 .default-modal {
 	.uk-modal-dialog {
 		position: relative;
 		padding: 80px 0;
 		.blockShadow();
 		width: 650px;
+		@media @mob-w {
+			padding: 40px 0;
+		}
 	}
 	.uk-modal-header {
 		padding: 0 12.3%;
@@ -43,6 +42,14 @@
 			  -webkit-font-smoothing: antialiased;
 			  -moz-osx-font-smoothing: grayscale;
 			}
+			@media @mob-w {
+				margin-bottom: 30px;
+				font-size: 24px;
+				line-height: 30px;
+				&:after {
+					font-size: 30px;
+				}
+			}
 		}
 		.uk-modal-close {
 			position: absolute;
@@ -65,6 +72,9 @@
 	}
 	.uk-modal-body {
 		padding: 0 12.3%;
+		@media @mob-w {
+			padding: 0 5%;
+		}
 	}
 	fieldset {
 		margin: 0;
@@ -86,6 +96,9 @@
     border-radius: 100px;
     transition: all .3s ease;
     font-size: 16px;
+    @media @mob-w {
+    	padding: 0 30px;
+    }
     &::placeholder {
     	color: #9b9b9b;
     }
@@ -141,7 +154,8 @@
 				cursor: pointer;
 			}
 		}
-		&.open {
+		@media @mob-w {
+			width: 100%;
 		}
 	}
 	.uk-dropdown-small {
@@ -152,6 +166,9 @@
 		background-color: #ffffff;
 	}
 	.uk-autocomplete {
+		@media @mob-w {
+			width: 100%;
+		}
 		&.uk-open {
 			input {
 				border-color: #293146;
@@ -167,6 +184,20 @@
 			}
 		}
 	}
+	label.error {
+		margin-top: -15px;
+		margin-bottom: 10px;
+		display: block !important;
+		color: #ff0043;
+	}
+}
+
+.callback-modal {
+	.uk-modal-header {
+		.title {
+			padding-right: 0;
+		}
+	}
 }
 
 .uk-datepicker {
@@ -174,6 +205,10 @@
 	border-top: 1px solid #e7f2f8;
 	max-width: 236px;
 	background: #ffffff;
+	@media @mob-w {
+		max-width: 100%;
+		width: 270px;
+	}
 	a {
 		&:hover {
 			color: #ffffff;

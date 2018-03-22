@@ -150,11 +150,17 @@
 .select2-container--default {
 	width: 100% !important;
 	height: 40px;
+	max-width: 100%;
 	line-height: 40px;
 	border-radius: 20px;
 	outline: none;
 	.blockShadow();
-	//box-sizing: content-box;
+	@media (min-width: 480px) and (max-width: 767px) {
+		max-width: 500px;
+	}
+	@media (min-width: 768px) and (max-width: 1200px) {
+		max-width: 500px;
+	}
 	&.select2-container--open {
 
 		box-shadow: none !important;
@@ -271,9 +277,9 @@
 	}
 	.custom-checkbox {
 		position: relative;
-		margin-right: 15px;
 		display: inline-block;
 		vertical-align: top;
+		float: left;
 		width: 20px;
 		height: 20px;
 		line-height: 20px;
@@ -303,6 +309,8 @@
 		}
 	}
 	.custom-label {
+		margin-left: 35px;
+		display: block;
 		overflow: hidden;
 		color: #9b9b9b;
 		font-size: 14px;
