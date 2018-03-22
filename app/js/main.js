@@ -58,7 +58,6 @@ $('.about-company-slider').slick({
 		autoplay: true,
 		autoplaySpeed: 3000,
 		speed: 500,
-		lazyLoad: 'progressive',
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
@@ -144,11 +143,11 @@ $('.about-company-slider').slick({
 	var player;
 
 	function initPlayer() {
-		function onYouTubeIframeAPIReady() {
+		function onYouTubeIframeAPIReady(id) {
 			player = new YT.Player('player', {
 				height: '100%',
 				width: '100%',
-				videoId: 'Y8NS-iBrh_A',
+				videoId: id,
 				events: {
 						'onReady': onPlayerReady
 				}
@@ -161,7 +160,8 @@ $('.about-company-slider').slick({
 
 		$('.video-preview').on('click', function(event) {
 			event.preventDefault();
-			onYouTubeIframeAPIReady();
+			var id = $(this).data('id');
+			onYouTubeIframeAPIReady(id);
 
 			var that = this;
 			$(this).addClass('hidden');
@@ -235,7 +235,7 @@ $('.about-company-slider').slick({
 /* FILTER SORT */
 
 (function() {
-	
+
 	var servicesArray = [];
 
 	$('.services-list__item').each(function(i, el) {
@@ -257,7 +257,7 @@ $('.about-company-slider').slick({
 
 		$(this).addClass('active');
 
-		sortList(_self);
+		sortList(servicesArray, _self);
 
 	});
 
@@ -281,15 +281,15 @@ $('.about-company-slider').slick({
 				$(el).removeClass('uk-hidden');
 			});
 		} else {
-			sortList(value);
+			sortList(servicesArray, value);
 		};
 
 	});
 
-	function sortList(value) {
+	function sortList(arr, value) {
 		var val = value,
 				valueLength = val.length;
-		servicesArray.map(function(el) {
+		arr.map(function(el) {
 			if(el.data('value').slice(0, valueLength).toLowerCase().toString() != val.toLowerCase().toString()) {
 				$(el).addClass('uk-hidden');
 			} else {

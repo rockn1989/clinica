@@ -571,6 +571,7 @@ html.uk-touch body *.uk-invisible {
   font-size: 40px;
 }
 .header-mobile a.btn.btn--fill {
+  position: relative;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -583,7 +584,9 @@ html.uk-touch body *.uk-invisible {
   }
 }
 .header-mobile a.btn.btn--fill:before {
-  position: static;
+  position: absolute;
+  left: 0;
+  right: 0;
   display: inline;
   line-height: inherit;
 }
@@ -667,6 +670,11 @@ html.uk-touch body *.uk-invisible {
   padding-bottom: 60px;
   background-color: #f7f7f7;
 }
+@media (min-width: 0) and (max-width: 767px) {
+  .staff-detail-header {
+    padding-bottom: 30px;
+  }
+}
 .staff-detail-header h1,
 .staff-detail-header h2 {
   margin-bottom: 10px;
@@ -699,9 +707,70 @@ html.uk-touch body *.uk-invisible {
 .content-body {
   padding: 40px 0 80px;
 }
+.content-body ul,
+.content-body ol {
+  padding-left: 0;
+}
+.content-body ul {
+  list-style: none;
+}
+.content-body ul li {
+  position: relative;
+}
+.content-body ul li:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 9px;
+  height: 9px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #ff0043;
+}
+.content-body ol {
+  counter-reset: section;
+  list-style: none;
+}
+.content-body ol li {
+  position: relative;
+}
+.content-body ol li:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ff0043;
+}
 .content-body ul li,
 .content-body ol li {
   margin-bottom: 7px;
+  padding-left: 25px;
+}
+.content-body blockquote {
+  position: relative;
+  margin-left: 5%;
+  margin: 20px 0 20px 5%;
+  max-width: 500px;
+  border: none;
+}
+.content-body blockquote:after,
+.content-body blockquote:before {
+  position: absolute;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  color: #ff0044;
+}
+.content-body blockquote:after {
+  content: "”";
+  right: -15px;
+}
+.content-body blockquote:before {
+  content: "“";
+  left: -15px;
 }
 .content-body .promo {
   margin-top: 100px;
@@ -1087,6 +1156,12 @@ html.uk-touch body *.uk-invisible {
   .staff-cards-list.column-3 .staff-card {
     width: 100%;
     margin: 0;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .staff-cards-list.column-3 .staff-card__desc {
+    padding: 0;
   }
 }
 .staff-card {
@@ -1133,6 +1208,11 @@ html.uk-touch body *.uk-invisible {
 .staff-card__desc {
   padding: 0 3%;
 }
+@media (min-width: 768px) and (max-width: 959px) {
+  .staff-card__desc {
+    padding: 0;
+  }
+}
 .staff-card__name {
   margin-bottom: 15px;
   color: #2a3246;
@@ -1170,14 +1250,20 @@ html.uk-touch body *.uk-invisible {
 .services-filter {
   margin-top: 5px;
   margin-bottom: 20px;
+  font-size: 21px;
+}
+.services-filter__text {
+  margin-right: 1%;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: top;
 }
 .services-filter__list {
   display: inline-block;
+  vertical-align: top;
   padding: 0;
   margin: 0;
-  margin-left: 1%;
   list-style: none;
-  font-size: 21px;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .services-filter__list {
@@ -1238,6 +1324,7 @@ html.uk-touch body *.uk-invisible {
 .services-list__item:hover .services-list__link {
   position: relative;
   opacity: 1;
+  display: block;
 }
 .services-list__item:hover .services-list__link:after {
   right: 0;
@@ -1261,14 +1348,8 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 768px) and (max-width: 959px) {
   .services-list__item {
     margin-bottom: 15px;
-    width: 23%;
+    width: 30%;
     margin-right: 2.66666%;
-  }
-  .services-list__item:nth-child(5n) {
-    margin-right: 2.66666%;
-  }
-  .services-list__item:nth-child(4n) {
-    margin-right: 0;
   }
 }
 .services-list__inner {
@@ -1316,7 +1397,7 @@ html.uk-touch body *.uk-invisible {
 .services-list__link {
   position: absolute;
   padding-right: 20px;
-  display: inline-block;
+  display: none;
   color: #ff0044;
   font-size: 12px;
   opacity: 0;
@@ -1328,7 +1409,7 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 0) and (max-width: 767px) {
   .services-list__link {
     position: relative;
-    display: inliblock;
+    display: inline-block;
     opacity: 1;
   }
 }
@@ -1590,12 +1671,11 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 0) and (max-width: 767px) {
   .service-coast__name {
     max-width: 70%;
+    word-break: break-all;
   }
 }
 .service-coast__value {
   float: right;
-}
-@media (min-width: 0) and (max-width: 767px) {
 }
 .service-coast__price {
   color: #2a3246;
@@ -1836,6 +1916,14 @@ html.uk-touch body *.uk-invisible {
   color: #2a3246;
   font-size: 24px;
   line-height: 26px;
+}
+.news-detail__desc {
+  margin-bottom: 40px !important;
+}
+@media (min-width: 960px) {
+  .news-detail__desc {
+    margin-bottom: 0 !important;
+  }
 }
 /* PAGE FOOTER */
 .footer {

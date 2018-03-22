@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!DOCTYPE html>
-<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,14 +17,16 @@
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/select2/select2.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="css/ie-style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script src="libs/html5shiv.min.js"></script>
 		<script src="libs/placholder.js"></script>
 	<![endif]-->
 </head>
-
 <body>
+
 	<header class="header">
 		<div class="header__top uk-visible-large">
 			<div class="uk-container">
@@ -143,32 +143,20 @@
 
 
 
-
 	<div class="content">
 		<div class="services-detail-header" style="background-image: url('img/detail-bg.png')">
 			<div class="uk-container">
 				<ul class="breadcrumbs">
-		
-		
-	<li><a href="">Главная</a></li>
-	
-	
-		
-	<li><a href="">Направления</a></li>
-	
-	
-		
-	<li>Гинекология</li>
-		
-	
-	</ul>
-
+					<li><a href="">Главная</a></li>
+					<li><a href="">Направления</a></li>
+					<li>Гинекология</li>
+				</ul>
 				<h1>Гинекология</h1>
 			</div>
 		</div>
 		<div class="content-body">
 			<div class="uk-container">
-				<div class="services-list-title">Выберите интересующую Вас услугу по направлению гинекология или  <a href="#callback" class="pink" data-uk-modal>Оставьте заявку </a> и консультант нашей клинике  поможет  с выбором услуги и врача по вашему недугу</div>
+				<div class="services-list-title">Выберите интересующую Вас услугу по направлению гинекология или  <a href="#callback-modal" class="pink" data-uk-modal>Оставьте заявку </a> и консультант нашей клинике  поможет  с выбором услуги и врача по вашему недугу</div>
 					<div class="services-list grid-4" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'.services-list__item', delay:200, repeat: false}">
 						<div class="services-list__item uk-invisible">
 							<div class="services-list__inner">
@@ -270,8 +258,6 @@
 		</div>
 	</div>
 
-
-
 	<footer class="footer">
 		<div class="uk-container">
 			<form action="" class="page-form-search">
@@ -355,7 +341,6 @@
 
 
 
-
 <div id="order-modal" class="uk-modal default-modal">
 	<div class="uk-modal-dialog">
 		<div class="uk-modal-header">
@@ -422,7 +407,6 @@
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 	<script src="libs/jquery.mask.min.js" defer></script>
 	<script src="libs/jquery.validate.min.js" defer></script>
 	<script src="libs/js/uikit.min.js" defer></script>
@@ -431,7 +415,6 @@
 	<script src="libs/svg4everybody.min.js" defer></script>
 	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 	<script src="js/main.js" defer></script>
-
 
 </body>
 </html>

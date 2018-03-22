@@ -38,6 +38,9 @@
 	margin-bottom: 30px;
 	padding-bottom: 60px;
 	background-color: #f7f7f7;
+	@media @mob-w {
+		padding-bottom: 30px;
+	}
 	h1,h2 {
 		margin-bottom: 10px;
 	}
@@ -67,9 +70,68 @@
 
 .content-body {
 	padding: 40px 0 80px;
+	ul,ol {
+		padding-left: 0;
+	}
+	ul {
+		list-style: none;
+		li {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 0;
+				display: block;
+				width: 9px;
+				height: 9px;
+				border-radius: 50%;
+				background-color: #ff0043;
+			}
+		}
+	}
+	ol {
+		counter-reset: section;
+		list-style: none;
+		li {
+			position: relative;
+			&:before {
+				counter-increment: section;
+				content: counter(section) ".";
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #ff0043;
+			}
+		}
+	}
 	ul li,
 	ol li {
 		margin-bottom: 7px;
+		padding-left: 25px;
+	}
+	blockquote {
+		position: relative;
+		margin-left: 5%;
+		margin: 20px 0 20px 5%;
+		max-width: 500px;
+		border: none;
+		&:after,
+		&:before {
+			position: absolute;
+			font-style: normal;
+			font-size: 40px;
+			line-height: 40px;
+			color: #ff0044;
+		}
+		&:after {
+			content: "”";
+			right: -15px;
+		}
+		&:before {
+			content: "“";
+			left: -15px;
+		}
 	}
 	.promo {
 		margin-top: 100px;
@@ -432,6 +494,12 @@
 			@media @mob-w {
 				width: 100%;
 				margin: 0;
+				margin-bottom: 30px;
+			}
+			&__desc {
+				@media @tablet-w {
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -467,6 +535,9 @@
 	}
 	&__desc {
 		padding: 0 3%;
+		@media @tablet-w {
+			padding: 0;
+		}
 	}
 	&__name {
 		margin-bottom: 15px;
@@ -510,13 +581,19 @@
 .services-filter {
 	margin-top: 5px;
 	margin-bottom: 20px;
+	font-size: 21px;
+	&__text {
+		margin-right: 1%;
+		margin-bottom: 10px;
+		display: inline-block;
+		vertical-align: top;
+	}
 	&__list {
 		display: inline-block;
+		vertical-align: top;
 		padding: 0;
 		margin: 0;
-		margin-left: 1%;
 		list-style: none;
-		font-size: 21px;
 		@media @mob-w {
 			margin-top: 10px;
 		}
@@ -567,6 +644,7 @@
 			.services-list__link {
 				position: relative;
 				opacity: 1;
+				display: block;
 				&:after {
 					right: 0;
 				}
@@ -586,19 +664,8 @@
 		}
 		@media @tablet-w {
 			margin-bottom: 15px;
-			width: 23%;
+			width: 30%;
 			margin-right: 2.66666%;
-			&:nth-child(5n) {
-				margin-right: 2.66666%;
-			}
-			&:nth-child(4n) {
-				margin-right: 0;
-			}
-		}
-		@media @desk-w {
-			&:nth-child(5n) {
-				//margin-right: 0;
-			}
 		}
 	}
 	&__inner {
@@ -631,14 +698,14 @@
 	&__link {
 		position: absolute;
 		padding-right: 20px;
-		display: inline-block;
+		display: none;
 		color: #ff0044;
 		font-size: 12px;
 		opacity: 0;
 		transition: none;
 		@media @mob-w {
 			position: relative;
-			display: inliblock;
+			display: inline-block;
 			opacity: 1;
 		}
 		@media @tablet-w {
