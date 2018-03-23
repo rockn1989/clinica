@@ -25,8 +25,8 @@
 		<script src="libs/placholder.js"></script>
 	<![endif]-->
 </head>
-<body>
 
+<body>
 	<header class="header">
 		<div class="header__top uk-visible-large">
 			<div class="uk-container">
@@ -147,12 +147,22 @@
 		<div class="content-header">
 			<div class="uk-container">
 				<ul class="breadcrumbs">
-					<li><a href="">Главная</a></li>
-					<li><a href="">Услуги и цены</a></li>
-					<li>Врачи</li>
-				</ul>
+		
+		
+	<li><a href="">Главная</a></li>
+	
+	
+		
+	<li><a href="">Услуги и цены</a></li>
+	
+	
+		
+	<li>Врачи</li>
+		
+	
+	</ul>
 				<h1>Врачи</h1>
-				<form action="" class="page-form-search">
+				<form action="" class="page-form-search js__staff-filter">
 					<input type="text" placeholder="Введите фамилию, специлизацию врача который Вас интересует">
 					<button class="page-form-search__btn icon-search"></button>
 				</form>
@@ -169,7 +179,23 @@
 							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
 						</div>
 					</div>
-					<div class="staff-card">
+					<div class="staff-card" data-user='{"name": "Папугин", "staff": "терапевт"}'>
+						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+						<div class="staff-card__desc">
+							<div class="staff-card__name"><span>Иванов</span>Андрей Владимирович</div>
+							<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+						</div>
+					</div>
+					<div class="staff-card" data-user='{"name": "Иванов", "staff": "окулист"}'>
+						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
+						<div class="staff-card__desc">
+							<div class="staff-card__name"><span>Пугачев</span>Андрей Владимирович</div>
+							<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
+							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
+						</div>
+					</div>
+					<div class="staff-card" data-user='{"name": "Петров", "staff": "травматолого"}'>
 						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
 						<div class="staff-card__desc">
 							<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
@@ -177,7 +203,7 @@
 							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
 						</div>
 					</div>
-					<div class="staff-card">
+					<div class="staff-card" data-user='{"name": "Хапугин", "staff": "гинеколог"}'">
 						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
 						<div class="staff-card__desc">
 							<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
@@ -185,23 +211,7 @@
 							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
 						</div>
 					</div>
-					<div class="staff-card">
-						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
-						<div class="staff-card__desc">
-							<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
-							<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
-							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
-						</div>
-					</div>
-					<div class="staff-card">
-						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
-						<div class="staff-card__desc">
-							<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
-							<div class="staff-card__text">Врач дерматовенеролог — косметолог. Высшей квалификационной категории.</div>
-							<a href="#" class="btn btn--fill icon-doctor-symbol">Запись к врачу</a>
-						</div>
-					</div>
-					<div class="staff-card">
+					<div class="staff-card" data-user='{"name": "Ринатов", "staff": "рентгенолог"}'>
 						<div class="staff-card__img"><img src="img/staff-card-img-235x200.jpg" alt="Папугин Андрей Владимирович"></div>
 						<div class="staff-card__desc">
 							<div class="staff-card__name"><span>Папугин</span>Андрей Владимирович</div>
@@ -237,6 +247,8 @@
 			</div>
 		</div>
 	</div>
+
+
 
 	<footer class="footer">
 		<div class="uk-container">
@@ -321,6 +333,7 @@
 
 
 
+
 <div id="order-modal" class="uk-modal default-modal">
 	<div class="uk-modal-dialog">
 		<div class="uk-modal-header">
@@ -395,6 +408,7 @@
 	<script src="libs/svg4everybody.min.js" defer></script>
 	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 	<script src="js/main.js" defer></script>
+
 
 </body>
 </html>

@@ -298,4 +298,54 @@ $('.about-company-slider').slick({
 		});
 	};
 
+	/* STAFF FILTER */
+
+	var staffFormFilter = $('.js__staff-filter input');
+	var staffDataArray = [];
+
+	$('.staff-card').each(function(i, el) {
+		staffDataArray.push($(el));
+	});
+
+
+	$(staffFormFilter).on('keyup', function() {
+		var value = $(this).val().toLowerCase();
+		var valueLength = value.length;
+
+		if(value.length == 0) {
+			staffDataArray.map(function(el) {
+				$(el).removeClass('uk-hidden');
+			});
+		} else {
+			sortStaffList(staffDataArray, value);
+		};
+
+	});
+
+	function sortStaffList(arr, value) {
+		var val = value,
+				valueLength = val.length;
+/*		arr.map(function(el) {
+			if(el.data('user').slice(0, valueLength).toLowerCase().toString() != val.toLowerCase().toString()) {
+				$(el).addClass('uk-hidden');
+			} else {
+				$(el).removeClass('uk-hidden');
+			}
+		});*/
+		arr.map(function(el) {
+			var obj = el.data('user');
+			var key = '';
+			console.log(obj["name"])
+			for (key in obj) {
+				if(
+					obj["name"].slice(0, valueLength).toLowerCase().toString() == val.toLowerCase().toString() || 
+					obj["staff"].slice(0, valueLength).toLowerCase().toString() == val.toLowerCase().toString()
+					) {
+					$(el).addClass('uk-hidden');
+				} else {
+					$(el).removeClass('uk-hidden');
+				}
+			}
+		});
+	};
 })();

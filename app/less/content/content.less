@@ -13,7 +13,7 @@
 
 	}
 	h1 {
-		margin-bottom: 45px;
+		margin-bottom: 0;
 		@media @mob-w {
 			margin-bottom: 30px;
 		}
@@ -22,7 +22,7 @@
 		margin-bottom: 10px;
 	}
 	.page-form-search {
-		margin-bottom: 40px;
+		margin: 40px 0;
 	}
 }
 
@@ -70,10 +70,13 @@
 
 .content-body {
 	padding: 40px 0 80px;
+	p:not([class]) {
+		max-width: 80%;
+	}
 	ul,ol {
 		padding-left: 0;
 	}
-	ul {
+	ul:not([class]) {
 		list-style: none;
 		li {
 			position: relative;
@@ -90,7 +93,8 @@
 			}
 		}
 	}
-	ol {
+	ol:not([class]) {
+		margin-top: 20px;
 		counter-reset: section;
 		list-style: none;
 		li {
@@ -105,8 +109,8 @@
 			}
 		}
 	}
-	ul li,
-	ol li {
+	ul:not([class]) li,
+	ol:not([class]) li {
 		margin-bottom: 7px;
 		padding-left: 25px;
 	}
@@ -138,6 +142,9 @@
 	}
 	.seo-text {
 		padding-top: 100px;
+	}
+	h2,h3,h4,h5 {
+		margin-top: 45px;
 	}
 }
 
@@ -628,12 +635,17 @@
 .services-list {
 	margin: 0;
 	padding: 0;
+	margin-right: -30px;
 	list-style: none;
 	font-size: 0;
+
+	@media (min-width: 0) and (max-width: 1220px) {
+		margin-right: 0;
+	}
 	&__item {
-		margin-right: 2.5%;
+		margin-right: 30px;
 		margin-bottom: 30px;
-		width: 18%;
+		width: 204px;
 		height: 140px;
 		display: inline-block;
 		vertical-align: top;
@@ -641,12 +653,18 @@
 		transition: box-shadow .3s ease;
 		&:hover {
 			box-shadow: 0 5px 30px #d7e3e9;
+			.services-list__name {
+				@media @desk-w {
+					transform: translate3d(0, -10px, 0);
+				}
+			}
 			.services-list__link {
-				position: relative;
-				opacity: 1;
-				display: block;
-				&:after {
-					right: 0;
+				@media @desk-w {
+					position: absolute;
+					opacity: 1;
+					&:after {
+						right: 0;
+					}
 				}
 			}
 		}
@@ -671,8 +689,9 @@
 	&__inner {
 		padding: 0 20px 0 30px;
 		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
+		display: table-cell;
+		height: 140px;
+		vertical-align: middle;
 		overflow: hidden;
 		@media @mob-w {
 			display: table-cell;
@@ -686,23 +705,22 @@
 		}
 	}
 	&__name {
-		position: relative;
-		top: 0;
 		color: #2a3246;
 		font-size: 18px;
 		font-weight: 700;
 		transition: top .3s ease;
 		align-self: center;
 		word-break: break-word;
+		transform: translate3d(0, 0, 0);
+		transition: all .3s ease;
 	}
 	&__link {
 		position: absolute;
 		padding-right: 20px;
-		display: none;
 		color: #ff0044;
 		font-size: 12px;
 		opacity: 0;
-		transition: none;
+		transition: all .3s ease;
 		@media @mob-w {
 			position: relative;
 			display: inline-block;
@@ -710,7 +728,7 @@
 		}
 		@media @tablet-w {
 			position: relative;
-			display: inliblock;
+			display: inline-block;
 			opacity: 1;
 		}
 		&:after {
@@ -719,7 +737,7 @@
 			position: absolute;
 			top: 5px;
 			right: 0;
-			display: block;
+			display: inline-block;
 			font-size: 12px;
 		  /* use !important to prevent issues with browser extensions that change fonts */
 		  font-family: 'icomoon' !important;
