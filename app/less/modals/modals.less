@@ -15,7 +15,6 @@
 		.title {
 			position: relative;
 			margin-bottom: 60px;
-			padding-right: 30%;
 			color: #2a3246;
 			font-size: 36px;
 			line-height: 42px;
@@ -23,32 +22,10 @@
 			letter-spacing: 0.77px;
 			font-family: @mainFont;
 			text-transform: uppercase;
-			&:after {
-				position: absolute;
-				top: 5px;
-				right: 0;
-				color: #ff0043;
-				font-size: 66px;
-				content: "\e902";
-			  font-family: 'icomoon' !important;
-			  speak: none;
-			  font-style: normal;
-			  font-weight: normal;
-			  font-variant: normal;
-			  text-transform: none;
-			  line-height: 1;
-
-			  /* Better Font Rendering =========== */
-			  -webkit-font-smoothing: antialiased;
-			  -moz-osx-font-smoothing: grayscale;
-			}
 			@media @mob-w {
 				margin-bottom: 30px;
 				font-size: 24px;
 				line-height: 30px;
-				&:after {
-					font-size: 30px;
-				}
 			}
 		}
 		.uk-modal-close {
@@ -198,35 +175,35 @@
 	}
 }
 
-.callback-modal {
-	.uk-modal-header {
-		.title {
-			padding-right: 0;
-		}
-	}
-}
+.order-modal {
+	.title {
+		padding-right: 30%;
+		&:after {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			color: #ff0043;
+			font-size: 66px;
+			content: "\e902";
+		  font-family: 'icomoon' !important;
+		  speak: none;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-variant: normal;
+		  text-transform: none;
+		  line-height: 1;
 
-
-.success-modal {
-	.uk-modal-header {
-		.title {
-			padding-right: 0;
-			&:after {
-				content: '';
-			}
+		  /* Better Font Rendering =========== */
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  @media @mob-w {
+		  	font-size: 30px;
+		  }
 		}
 	}
 }
 
 .interview-modal {
-	.uk-modal-header {
-		.title {
-			padding-right: 0;
-			&:after {
-				content: '';
-			}
-		}
-	}
 	.interview-title {
 		margin-bottom: 25px;
 		color: #2a3246;
