@@ -2497,6 +2497,12 @@ html.uk-touch body *.uk-invisible {
 .callback-modal .uk-modal-header .title {
   padding-right: 0;
 }
+.success-modal .uk-modal-header .title {
+  padding-right: 0;
+}
+.success-modal .uk-modal-header .title:after {
+  content: '';
+}
 .interview-modal .uk-modal-header .title {
   padding-right: 0;
 }
