@@ -11,8 +11,8 @@ $(function() {
 	});
 
 
-	/* MAIN SLIDER */
 
+	/* MAIN SLIDER */
 
 	$('.main-slider').slick({
 		arrows: false,
@@ -49,6 +49,7 @@ $(function() {
 			}
 		]
 	});
+
 
 $('.about-company-slider').slick({
 		arrows: false,
