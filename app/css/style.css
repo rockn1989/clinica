@@ -1140,17 +1140,19 @@ html.uk-touch body *.uk-invisible {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin-right: -60px;
 }
 .staff-cards-list .staff-card {
   margin-bottom: 30px;
 }
 @media (min-width: 960px) {
   .staff-cards-list .staff-card {
-    margin-right: 2.66666%;
+    margin-right: 30px;
+    width: 270px;
   }
-  .staff-cards-list .staff-card:nth-child(4n) {
-    margin-right: 0;
-  }
+}
+.staff-cards-list.column-3 {
+  margin-right: 0;
 }
 .staff-cards-list.column-3 .staff-card {
   width: 30%;
@@ -1172,6 +1174,11 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 768px) and (max-width: 959px) {
   .staff-cards-list.column-3 .staff-card__desc {
     padding: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 1280px) {
+  .staff-cards-list {
+    margin-right: 0;
   }
 }
 .staff-card {
@@ -1210,6 +1217,7 @@ html.uk-touch body *.uk-invisible {
           box-shadow: 0 5px 30px #d7e3e9;
 }
 .staff-card__img {
+  position: relative;
   margin-bottom: 20px;
   text-align: center;
   max-height: 196px;
@@ -2441,6 +2449,13 @@ html.uk-touch body *.uk-invisible {
           border-radius: 20px 20px 0 0;
   border-bottom: none !important;
 }
+.default-modal .custom-input__wrapper input[type="text"].focused {
+  background: url('../img/icon-svg/arrow-up-icon.svg') right 20px center no-repeat;
+  border-color: #293146 !important;
+  -webkit-border-radius: 20px 20px 0 0;
+          border-radius: 20px 20px 0 0;
+  border-bottom: none !important;
+}
 .default-modal .custom-input__wrapper:hover {
   cursor: pointer;
 }
@@ -2481,6 +2496,29 @@ html.uk-touch body *.uk-invisible {
 }
 .callback-modal .uk-modal-header .title {
   padding-right: 0;
+}
+.interview-modal .uk-modal-header .title {
+  padding-right: 0;
+}
+.interview-modal .uk-modal-header .title:after {
+  content: '';
+}
+.interview-modal .interview-title {
+  margin-bottom: 25px;
+  color: #2a3246;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.interview-modal form::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.interview-modal form::before {
+  content: "";
+  display: table;
+  clear: both;
 }
 .uk-datepicker {
   border: 1px solid #293146;
@@ -2794,13 +2832,16 @@ html.uk-touch body *.uk-invisible {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.custom-checkbox input[type="checkbox"] {
+label.custom-checkbox-wrapper:hover {
+  cursor: pointer;
+}
+label.custom-checkbox-wrapper input[type="checkbox"] {
   display: none;
 }
-.custom-checkbox input[type="checkbox"]:checked ~ .custom-checkbox {
+label.custom-checkbox-wrapper input[type="checkbox"]:checked ~ .custom-checkbox {
   background-color: #293146;
 }
-.custom-checkbox .custom-checkbox {
+label.custom-checkbox-wrapper .custom-checkbox {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -2816,7 +2857,7 @@ html.uk-touch body *.uk-invisible {
   border: 1px solid #96a0aa;
   background-color: #ffffff;
 }
-.custom-checkbox .custom-checkbox:before {
+label.custom-checkbox-wrapper .custom-checkbox:before {
   color: #ffffff;
   font-size: 12px;
   content: "\e90c";
@@ -2831,10 +2872,84 @@ html.uk-touch body *.uk-invisible {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.custom-checkbox .custom-checkbox:hover {
+label.custom-checkbox-wrapper .custom-checkbox:hover {
   cursor: pointer;
 }
-.custom-checkbox .custom-label {
+label.custom-checkbox-wrapper .custom-checkbox-label {
+  margin-left: 35px;
+  display: block;
+  overflow: hidden;
+  color: #9b9b9b;
+  font-size: 14px;
+}
+label.custom-radio-wrapper {
+  margin-bottom: 10px;
+  display: block;
+}
+label.custom-radio-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+label.custom-radio-wrapper::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+label.custom-radio-wrapper:hover {
+  cursor: pointer;
+}
+label.custom-radio-wrapper input[type="radio"] {
+  display: none;
+}
+label.custom-radio-wrapper input[type="radio"]:checked ~ .custom-radio-btn {
+  background-color: #293146;
+}
+label.custom-radio-wrapper .custom-radio-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 13px #d7e3e9;
+          box-shadow: 0 3px 13px #d7e3e9;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #96a0aa;
+  background-color: #ffffff;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+}
+label.custom-radio-wrapper .custom-radio-btn:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: inline-block;
+  color: #ffffff;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  background-color: #ffffff;
+  content: "";
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+label.custom-radio-wrapper .custom-radio-btn:hover {
+  cursor: pointer;
+}
+label.custom-radio-wrapper .custom-radio-label {
   margin-left: 35px;
   display: block;
   overflow: hidden;

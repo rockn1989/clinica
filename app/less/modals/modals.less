@@ -147,6 +147,12 @@
 				border-radius: 20px 20px 0 0;
 				border-bottom: none !important;
 			}
+			&.focused {
+				background: url('../img/icon-svg/arrow-up-icon.svg') right 20px center no-repeat;
+				border-color: #293146 !important;
+				border-radius: 20px 20px 0 0;
+				border-bottom: none !important;
+			}
 		}
 		&:hover {
 			cursor: pointer;
@@ -197,6 +203,27 @@
 		.title {
 			padding-right: 0;
 		}
+	}
+}
+
+.interview-modal {
+	.uk-modal-header {
+		.title {
+			padding-right: 0;
+			&:after {
+				content: '';
+			}
+		}
+	}
+	.interview-title {
+		margin-bottom: 25px;
+		color: #2a3246;
+		font-size: 21px;
+		line-height: 26px;
+		font-weight: 700;
+	}
+	form {
+		.clearfix();
 	}
 }
 

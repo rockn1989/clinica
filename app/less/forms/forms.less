@@ -266,7 +266,10 @@
 	}
 }
 
-.custom-checkbox {
+label.custom-checkbox-wrapper {
+	&:hover {
+		cursor: pointer;
+	}
 	input[type="checkbox"] {
 		display: none;
 		&:checked {
@@ -308,7 +311,72 @@
 			cursor: pointer;
 		}
 	}
-	.custom-label {
+	.custom-checkbox-label {
+		margin-left: 35px;
+		display: block;
+		overflow: hidden;
+		color: #9b9b9b;
+		font-size: 14px;
+	}
+}
+
+label.custom-radio-wrapper {
+	margin-bottom: 10px;
+	display: block;
+	.clearfix();
+	&:hover {
+		cursor: pointer;
+	}
+	input[type="radio"] {
+		display: none;
+		&:checked {
+			~ .custom-radio-btn {
+				background-color: #293146;
+			}
+		}
+	}
+	.custom-radio-btn {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		.blockShadow();
+		border-radius: 3px;
+		border: 1px solid #96a0aa;
+		background-color: #ffffff;
+		border-radius: 50px;
+		&:before {
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			display: inline-block;
+			color: #ffffff;
+			width: 10px;
+			height: 10px;
+			border-radius: 50px;
+			background-color: #ffffff;
+			content: "";
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.custom-radio-label {
 		margin-left: 35px;
 		display: block;
 		overflow: hidden;

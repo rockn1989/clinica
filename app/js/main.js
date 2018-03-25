@@ -2,17 +2,17 @@
 
 $(function() {
 
+	/* MAIN SLIDER PRELOAD */
+
 	$('div.preload').each(function( i, el) {
 		if($(el).load()) {
 			$(el).addClass('ready');
 		};
 	});
 
+
 	/* MAIN SLIDER */
 
-/*	if($('.main-slider').load()) {
-		$('.main-slider').addClass('ready');
-	};*/
 
 	$('.main-slider').slick({
 		arrows: false,
@@ -62,6 +62,7 @@ $('.about-company-slider').slick({
 		slidesToScroll: 1
 	});
 
+
 	/*** HEADER SEARCH FORM ***/
 
 	$('.header__search').on('click', function(e) {
@@ -92,7 +93,7 @@ $('.about-company-slider').slick({
 				$(document).unbind('click keyup', hiddenSearchForm);
 			});
 		};
-	}
+	};
 
 
 	/* SERVICE COAST */
@@ -169,25 +170,12 @@ $('.about-company-slider').slick({
 					$(that).css('z-index', -1)
 			}, 1000)
 		});
-	}
+	};
 
 	initPlayer();
 
 
 	/* CUSTOM SELECT */
-
-	function formatState (state) {
-		if (!state.id) {
-			return state.text;
-		}
-		if($(state.element).data('status') == 'disabled') {
-			var $state = $('<div class="disabled">' + state.text + '<a href="#subscribe" data-uk-modal="{target: "#subscribe", modal: false}">Подписаться</a>' + '</div>');
-		} else {
-			var $state = $('<div>' + state.text + '!</div>');
-		}
-
-		return $state;
-	};
 
 	$('.js__custom-select').select2({
 		placeholder: "Выберите специалиста",
@@ -195,14 +183,26 @@ $('.about-company-slider').slick({
 	});
 
 
+	/* DATEPICKER EVENTS */
 
-// DISABLED UIKIT ANIMATION FOR MOBILE
+	var datepicker = UIkit.datepicker($('.custom-input[data-uk-datepicker]'),{offsettop: 0});
+
+	datepicker.on('show.uk.datepicker', function() {
+		$('.custom-input[data-uk-datepicker]').addClass('focused')
+	})
+	datepicker.on('hide.uk.datepicker', function() {
+		$('.custom-input[data-uk-datepicker]').removeClass('focused')
+	})
+
+
+	/* DISABLED UIKIT ANIMATION FOR MOBILE */
 
 	UIkit.on('beforeready.uk.dom', function () {
 		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
 			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
 		}
 	});
+
 
 	/* FORM VALIDATION */
 
@@ -223,20 +223,22 @@ $('.about-company-slider').slick({
 			});
 	});
 
+
 	/* MASK FORM */
-	$('.default-modal input.js__mask').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {
-		if (!$(this).val()) {
-			$(this).val('+7 ');
-		}
+
+	$('input.js__mask').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {
+		$(this).val('');
 	});
 
 });
+
 
 /* FILTER SORT */
 
 (function() {
 
-	var servicesArray = [];
+	var servicesArray = [],
+			lastTime = 0;
 
 	$('.services-list__item').each(function(i, el) {
 		servicesArray.push($(el));
@@ -257,7 +259,11 @@ $('.about-company-slider').slick({
 
 		$(this).addClass('active');
 
-		sortList(servicesArray, _self);
+		$('.services-list').fadeOut(function() {
+			sortList(servicesArray, _self);
+		});
+
+		$('.services-list').fadeIn();
 
 	});
 
@@ -267,22 +273,30 @@ $('.about-company-slider').slick({
 	var formFilter = ('.js__directions-filter input');
 
 	$(formFilter).on('focus', function() {
-		servicesArray.filter(function(el, i) {
+		$.each(servicesArray, function(i, el) {
 			$(el).removeClass('uk-hidden');
 		});
 	});
 
 	$(formFilter).on('keyup', function() {
-		var value = $(this).val().toLowerCase();
-		var valueLength = value.length;
+		var value = $(this).val().toLowerCase(),
+				valueLength = value.length;
 
-		if(value.length == 0) {
-			servicesArray.map(function(el) {
-				$(el).removeClass('uk-hidden');
-			});
-		} else {
-			sortList(servicesArray, value);
-		};
+	  if(Date.now() - lastTime >= 800) {
+
+			if(value.length == 0) {
+				servicesArray.map(function(el) {
+					$(el).removeClass('uk-hidden');
+				});
+			} else {
+				$('.services-list').fadeOut(function() {
+					sortList(servicesArray, value);
+				});
+
+				$('.services-list').fadeIn();
+			};
+			lastTime = Date.now();
+	  }
 
 	});
 
@@ -298,54 +312,60 @@ $('.about-company-slider').slick({
 		});
 	};
 
+
 	/* STAFF FILTER */
 
-	var staffFormFilter = $('.js__staff-filter input');
-	var staffDataArray = [];
+	var staffFormFilter = $('.js__staff-filter input'),
+			staffArray = [];
 
 	$('.staff-card').each(function(i, el) {
-		staffDataArray.push($(el));
+		staffArray.push($(el));
 	});
 
+	$(staffFormFilter).on('focus', function() {
+		$.each(staffArray, function(i, el) {
+			$(el).removeClass('uk-hidden');
+		});
+	});
 
 	$(staffFormFilter).on('keyup', function() {
-		var value = $(this).val().toLowerCase();
-		var valueLength = value.length;
+		var value = $(this).val().toLowerCase(),
+				valueLength = value.length;
+		if(Date.now() - lastTime >= 800) {
+			if(value.length == 0) {
+				staffArray.map(function(el) {
+					$(el).removeClass('uk-hidden');
+				});
+			} else {
+				$('.staff-cards-list').fadeOut(function() {
+					sortStaffList(staffArray, value);
+				});
 
-		if(value.length == 0) {
-			staffDataArray.map(function(el) {
-				$(el).removeClass('uk-hidden');
-			});
-		} else {
-			sortStaffList(staffDataArray, value);
-		};
-
+				$('.staff-cards-list').fadeIn();
+			};
+			lastTime = Date.now();
+		}
 	});
 
 	function sortStaffList(arr, value) {
 		var val = value,
-				valueLength = val.length;
-/*		arr.map(function(el) {
-			if(el.data('user').slice(0, valueLength).toLowerCase().toString() != val.toLowerCase().toString()) {
-				$(el).addClass('uk-hidden');
-			} else {
-				$(el).removeClass('uk-hidden');
-			}
-		});*/
+				valueLength = val.length,
+				obj;
 		arr.map(function(el) {
-			var obj = el.data('user');
-			var key = '';
-			console.log(obj["name"])
-			for (key in obj) {
+			obj = el.data('user');
+			if(obj) {
 				if(
-					obj["name"].slice(0, valueLength).toLowerCase().toString() == val.toLowerCase().toString() || 
-					obj["staff"].slice(0, valueLength).toLowerCase().toString() == val.toLowerCase().toString()
+					obj["name"].slice(0, valueLength).toLowerCase().toString() != val.toLowerCase().toString() &&
+					obj["staff"].slice(0, valueLength).toLowerCase().toString() != val.toLowerCase().toString()
 					) {
 					$(el).addClass('uk-hidden');
 				} else {
 					$(el).removeClass('uk-hidden');
 				}
+			} else {
+				$(el).addClass('uk-hidden');
 			}
 		});
 	};
+
 })();

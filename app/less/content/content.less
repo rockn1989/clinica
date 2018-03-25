@@ -267,8 +267,8 @@
 		right: 0;
 		@media @mob-w {
 			position: static;
-	    display: block;
-	    margin: 0 auto;
+			display: block;
+			margin: 0 auto;
 		}
 		@media @tablet-w {
 			width: 350px;
@@ -479,16 +479,20 @@
 	font-size: 0;
 	display: flex;
 	flex-wrap: wrap;
+	margin-right: -60px;
 	.staff-card {
 		margin-bottom: 30px;
+
 		@media @desk-w {
-			margin-right: 2.66666%;
+			margin-right: 30px;
+			width: 270px;
 			&:nth-child(4n) {
-				margin-right: 0;
+				//margin-right: 0;
 			}
 		}
 	}
 	&.column-3 {
+		margin-right: 0;
 		.staff-card {
 			width: 30%;
 			margin-right: 3.3333%;
@@ -509,6 +513,9 @@
 				}
 			}
 		}
+	}
+	@media (min-width: 0) and (max-width: 1280px) {
+		margin-right: 0;
 	}
 }
 
@@ -535,7 +542,9 @@
 		box-shadow: 0 5px 30px #d7e3e9;
 	}
 	&__img {
+		position: relative;
 		margin-bottom: 20px;
+
 		text-align: center;
 		max-height: 196px;
 		overflow: hidden;
@@ -739,21 +748,21 @@
 			right: 0;
 			display: inline-block;
 			font-size: 12px;
-		  /* use !important to prevent issues with browser extensions that change fonts */
-		  font-family: 'icomoon' !important;
-		  speak: none;
-		  font-style: normal;
-		  font-weight: normal;
-		  font-variant: normal;
-		  text-transform: none;
-		  line-height: 1;
+			/* use !important to prevent issues with browser extensions that change fonts */
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
 
-		  /* Better Font Rendering =========== */
-		  -webkit-font-smoothing: antialiased;
-		  -moz-osx-font-smoothing: grayscale;
-		  @media @desk-w {
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			@media @desk-w {
 				right: 20%;
-		  }
+			}
 		}
 	}
 	&.grid-4 {
@@ -826,18 +835,18 @@
 				position: absolute;
 				right: 0;
 				content: "\e90f";
-			  /* use !important to prevent issues with browser extensions that change fonts */
-			  font-family: 'icomoon' !important;
-			  speak: none;
-			  font-style: normal;
-			  font-weight: normal;
-			  font-variant: normal;
-			  text-transform: none;
-			  line-height: 1;
+				/* use !important to prevent issues with browser extensions that change fonts */
+				font-family: 'icomoon' !important;
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
 
-			  /* Better Font Rendering =========== */
-			  -webkit-font-smoothing: antialiased;
-			  -moz-osx-font-smoothing: grayscale;
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 		}
 		@media (min-width: 600px) {
