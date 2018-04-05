@@ -230,7 +230,7 @@ $('.about-company-slider').slick({
 				if(el.value.toLowerCase().indexOf(value) !== -1 && el.value.toLowerCase().indexOf(value) == 0) {
 					$('.search-form').addClass('find');
 					template.addClass('visible');
-					var result = '<li><a href="'+el.url+'">'+el.value+'</a></li>'
+					var result = '<li><a href="' + el.url + '">' + el.value + '</a></li>'
 					template.find('ul').append(result);
 				}
 			});
