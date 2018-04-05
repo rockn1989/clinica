@@ -25,6 +25,7 @@
 		<script src="libs/placeholders.min.js"></script>
 	<![endif]-->
 </head>
+
 <body>
 	<header class="header">
 		<div class="header__top uk-visible-large">
@@ -68,10 +69,11 @@
 								</div>
 							</div>
 							<form action="" method="" class="search-form blue">
-									<input type="text" name="term" placeholder="Поиск нужного направления">
+									<input type="text" name="term" placeholder="Поиск нужного направления" autocomplete="off">
 									<button type="submit" class="search-form__btn icon-search">
 									</button>
 							</form>
+							<div class="autocomplete"><ul class="list-result"></ul></div>
 						</div>
 					</div>
 				</div>
@@ -132,10 +134,13 @@
 						<button type="submit" class="search-form__btn icon-search">
 						</button>
 					</form>
+					<div class="autocomplete"><ul class="list-result"></ul></div>
 				</div>
 			</div>
 		</div>
 	</header>
+
+
 
 
 
@@ -329,6 +334,8 @@
 		</div>
 	</div>
 
+
+
 	<footer class="footer">
 		<div class="uk-container">
 			<form action="" class="page-form-search">
@@ -409,6 +416,9 @@
 			</div>
 		</div>
 	</footer>
+
+
+
 
 
 
@@ -584,6 +594,8 @@
 
 
 
+
+
 	<script src="libs/jquery.mask.min.js" defer></script>
 	<script src="libs/jquery.validate.min.js" defer></script>
 	<script src="libs/js/uikit.min.js" defer></script>
@@ -592,6 +604,7 @@
 	<script src="libs/svg4everybody.min.js" defer></script>
 	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 	<script src="js/main.js" defer></script>
+
 
 </body>
 </html>

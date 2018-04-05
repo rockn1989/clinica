@@ -17,7 +17,7 @@
 		box-shadow: 0 3px 13px #d7e3e9;
 		border: 1px solid #e7f2f8;
 		border-radius: 100px;
-		transition: all .3s ease;
+		transition: border-color .3s ease;
 		font-size: 16px;
 		&:focus {
 			border: 1px solid #ff0043 !important;
@@ -382,5 +382,77 @@ label.custom-radio-wrapper {
 		overflow: hidden;
 		color: #9b9b9b;
 		font-size: 14px;
+	}
+}
+
+
+/* AUTOCOMPLETE */
+
+.header .contacts {
+	position: relative;
+}
+
+.mobile-search {
+	position: relative;
+	.search-form {
+		&.find ~ .autocomplete {
+			border-color: #ff0043;
+		}
+	}
+}
+
+.search-form {
+	&.find {
+		input[type="text"] {
+			border-radius: 20px 20px 0 0;
+			border-bottom: 1px solid #e7f2f8;
+			&:focus {
+				border-bottom: 1px solid #e7f2f8 !important;
+			}
+		}
+		button {
+			border-radius: 20px 20px 0 20px;
+		}
+	}
+
+}
+
+.autocomplete {
+	position: absolute;
+	top: 51px;
+	left: 0;
+	z-index: 500;
+	width: 100%;
+	border: 1px solid #293146;
+	border-top: none;
+	display: block;
+	opacity: 0;
+	transition: opacity .35s linear;
+	ul  {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			
+			width: 100%;
+			a {
+				padding: 9px 0 9px 5%;
+				padding-left: 5%;
+				display: block;
+				text-decoration: none;
+				background-color: #ffffff;
+				color: #444;
+				@media (max-width: 960px) {
+					padding-left: 20px;
+				}
+				&:hover {
+					color: #ff0043;
+				}
+			}
+		}
+	}
+	&.visible {
+		display: block;
+		opacity: 1;
 	}
 }
