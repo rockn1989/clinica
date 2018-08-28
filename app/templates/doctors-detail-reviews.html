@@ -1,0 +1,101 @@
+{% extends "layouts/default.html" %}
+{% set title="Врачи" %}
+{% set bread = ["Главная", "Врачи", "Зорин Артем"] %}
+{% set main = false %}
+{% block content %}
+	<div class="content">
+		<div class="staff-detail-header">
+			<div class="uk-container">
+				{% include "includes/breadcrumbs.html" %}
+				<h2>Зорин Артем Александрович</h2>
+				<div class="detail-staff-position">Массажист</div>
+				<div class="detail-staff-avatar"><img src="img/doctora-detail-250x210.jpg" alt="Зорин Артем Александрович"></div>
+				<a href="#" class="btn btn--fill icon-doctor-symbol">Записаться к врачу</a>
+			</div>
+		</div>
+		<div class="content-body">
+			<div class="uk-container">
+				<p>Действующий сертификат: «Медицинский массаж»</p>
+				<p>Стаж работы более 20 лет.</p>
+				<p>Образование:</p>
+				<p>1995 г. «Медицинский брат». Ржевское медицинское училище Министерства Здравоохранения РФ.</p>
+				<p>1995 г. Курс физиотерапии, ЛФК, массаж при Ржевском медицинском училище Министерства Здравоохранения РФ.</p>
+				<p>Повышение квалификации:</p>
+				<p>2014 г. Повышение квалификации «Медицинский массаж»  Федеральное государственное бюджетное образовательное учреждение высшего профессионального образования «РУДН» Министерства образования и науки РФ Факультета повышения квалификации медицинских работников.</p>
+				<p>Методы и направления работы:</p>
+				<ul>
+					<li>Лечебный массаж</li>
+					<li>Антицеллюлитный массаж</li>
+					<li>Сегментарно-рефлекторный массаж</li>
+					<li>Спортивный массаж</li>
+					<li>Общий массаж</li>
+				</ul>
+				<div class="detail-services">
+					<h2>Услуги врача</h2>
+					<div class="services-list grid-4" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'.services-list__item', delay:200, repeat: false}">
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Лечебный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Лимфодренажный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Антицеллюлитный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Китайский традиционный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Антицеллюлитный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Китайский традиционный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Антицеллюлитный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Китайский традиционный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Антицеллюлитный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+						<div class="services-list__item uk-invisible">
+							<div class="services-list__inner">
+								<div class="services-list__name">Китайский традиционный массаж</div>
+								<a href="#" class="services-list__link">Перейти в раздел</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

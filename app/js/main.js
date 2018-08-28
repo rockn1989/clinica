@@ -324,7 +324,7 @@ $('.about-company-slider').slick({
 
 
 	$('.uk-modal').on('show.uk.modal', function() {
-		var width = $('.default-modal input[type="text"]').outerWidth();
+		var width = $(this).find('input[type="text"]').outerWidth();
 		$('.js__custom-select').select2({
 			placeholder: "Выберите специалиста",
 			minimumResultsForSearch: -1,
@@ -333,9 +333,43 @@ $('.about-company-slider').slick({
 		});
 	});
 
+	$('.js__reviews-select').select2({
+		minimumResultsForSearch: -1,
+		dropdownPosition: 'below'
+	});
 
 
+	$('.reviews-form-reset ').on('click', function (e) {
+		e.preventDefault();
+		$('.js__reviews-select').val([]).trigger('change');
+	});
 
+	var template = document.querySelector('#reviews').content.cloneNode(true)
+	var $reviewsWrapper = $('.reviews-list');
+
+	$('.upload-more').on('inview.uk.scrollspy', function() {
+		var _self = $(this);
+	    setTimeout(function () {
+	    	$reviewsWrapper.append(template);
+	    	
+	    	_self.on('outview.uk.scrollspy', function () {
+	    		_self.removeClass('load uk-scrollspy-init-inview uk-scrollspy-inview');
+	    	});
+	    }, 2000);
+	    
+	});
+
+	/* MODAL FORM RADIO-BUTTON CHANGE */
+
+	$('.uk-modal').on('show.uk.modal', function() {
+		var $radioWrapper = $(this).children('.radio-wrapper');
+		var radio = $(this).find('input[type="radio"]').attr('checked');
+		console.log(radio)
+	});
+
+	$('.radio-wrapper').on('change','input[type="radio"]', function () {
+		console.log(this)
+	});
 
 
 	/* DATEPICKER EVENTS */
