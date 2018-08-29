@@ -1968,6 +1968,12 @@ html.uk-touch body *.uk-invisible {
   }
 }
 /* REVIEWS */
+.block-review {
+  margin-top: 50px;
+}
+.block-review .reviews-list {
+  margin-top: 20px;
+}
 .review-title-wrapper::after {
   content: "";
   display: table;
@@ -2118,26 +2124,26 @@ html.uk-touch body *.uk-invisible {
   position: relative;
   display: inline-block;
   padding: 8px 0 8px 25px;
-  font-family: "Proxima Nova" !important;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-decoration: none;
 }
 .upload-more-wrapper .upload-more:before {
+  content: '';
   position: absolute;
   top: 8px;
   left: 0;
-  font-family: 'icomoon' !important;
   width: 21px;
   height: 21px;
-  line-height: 23px;
-  font-size: 18px;
   display: block;
   -webkit-transform-origin: center center;
      -moz-transform-origin: center center;
       -ms-transform-origin: center center;
           transform-origin: center center;
+  background: url('../img/preload.png') center no-repeat;
+  -webkit-background-size: 18px;
+  background-size: 18px;
 }
 .upload-more-wrapper .upload-more.load:before {
   -webkit-animation: spin-around 0.75s linear infinite;
@@ -2151,31 +2157,45 @@ html.uk-touch body *.uk-invisible {
 }
 @-webkit-keyframes spin-around {
   0% {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
   100% {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 @-moz-keyframes spin-around {
   0% {
+    -moz-transform-origin: center center;
+         transform-origin: center center;
     -moz-transform: rotate(0);
          transform: rotate(0);
   }
   100% {
+    -moz-transform-origin: center center;
+         transform-origin: center center;
     -moz-transform: rotate(360deg);
          transform: rotate(360deg);
   }
 }
 @keyframes spin-around {
   0% {
+    -webkit-transform-origin: center center;
+       -moz-transform-origin: center center;
+            transform-origin: center center;
     -webkit-transform: rotate(0);
        -moz-transform: rotate(0);
             transform: rotate(0);
   }
   100% {
+    -webkit-transform-origin: center center;
+       -moz-transform-origin: center center;
+            transform-origin: center center;
     -webkit-transform: rotate(360deg);
        -moz-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -2291,6 +2311,35 @@ html.uk-touch body *.uk-invisible {
 }
 .default-modal .radio-value-fields fieldset {
   margin-bottom: 30px;
+}
+.default-modal .radio-value-fields.change {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.default-modal .radio-value-fields.change:before {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background: url('../img/preload.png') center no-repeat;
+  content: "";
+  color: #f04;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: center center;
+     -moz-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: spin-around 0.75s linear infinite;
+     -moz-animation: spin-around 0.75s linear infinite;
+          animation: spin-around 0.75s linear infinite;
 }
 /* END REVIEWS */
 /* PAGE FOOTER */

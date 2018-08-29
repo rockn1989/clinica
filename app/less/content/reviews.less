@@ -1,5 +1,12 @@
 /* REVIEWS */
 
+.block-review {
+	margin-top: 50px;
+	.reviews-list {
+		margin-top: 20px;
+	}
+}
+
 .review-title-wrapper {
 	.clearfix();
 	h1 {
@@ -141,22 +148,22 @@
 		position: relative;
 		display: inline-block;
 		padding: 8px 0 8px 25px;
-		font-family: @mainFont !important;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 21px;
 		text-decoration: none;
 		&:before {
+			content: '';
 			position: absolute;
 			top: 8px;
 			left: 0;
-			font-family: 'icomoon' !important;
 			width: 21px;
 			height: 21px;
-			line-height: 23px;
-			font-size: 18px;
 			display: block;
 			transform-origin: center center;
+			background: url('../img/preload.png') center no-repeat;
+			-webkit-background-size: 18px;
+			background-size: 18px;
 		}
 		&.load {
 			&:before {
@@ -172,9 +179,11 @@
 
 @keyframes spin-around {
 	0% {
+		transform-origin: center center;
 		transform: rotate(0);
 	}
 	100% {
+		transform-origin: center center;
 		transform: rotate(360deg);	
 	}
 }
@@ -223,6 +232,27 @@
 		margin: 20px 0;
 		fieldset {
 			margin-bottom: 30px;
+		}
+		&.change {
+			position: relative;
+			width: 100%;
+			height: 280px;
+			overflow: hidden;
+			background: #ffffff;
+			&:before {
+				display: block;
+				width: 21px;
+				height: 21px;
+				background: url('../img/preload.png') center no-repeat;
+				content: "";
+				color: #f04;
+				position: absolute;
+				top: 30%;
+				left: 50%;
+				transform: translateX(-50%);
+				transform-origin: center center;
+				animation: spin-around .75s linear infinite;
+			}
 		}
 	}	
 }

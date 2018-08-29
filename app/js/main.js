@@ -4,102 +4,102 @@
 
 (function($) {
 
-  var Defaults = $.fn.select2.amd.require('select2/defaults');
+	var Defaults = $.fn.select2.amd.require('select2/defaults');
 
-  $.extend(Defaults.defaults, {
-    dropdownPosition: 'auto'
-  });
+	$.extend(Defaults.defaults, {
+		dropdownPosition: 'auto'
+	});
 
-  var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
+	var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
 
-  var _positionDropdown = AttachBody.prototype._positionDropdown;
+	var _positionDropdown = AttachBody.prototype._positionDropdown;
 
-  AttachBody.prototype._positionDropdown = function() {
+	AttachBody.prototype._positionDropdown = function() {
 
-    var $window = $(window);
+		var $window = $(window);
 
-    var isCurrentlyAbove = this.$dropdown.hasClass('select2-dropdown--above');
-    var isCurrentlyBelow = this.$dropdown.hasClass('select2-dropdown--below');
+		var isCurrentlyAbove = this.$dropdown.hasClass('select2-dropdown--above');
+		var isCurrentlyBelow = this.$dropdown.hasClass('select2-dropdown--below');
 
-    var newDirection = null;
+		var newDirection = null;
 
-    var offset = this.$container.offset();
+		var offset = this.$container.offset();
 
-    offset.bottom = offset.top + this.$container.outerHeight(false);
+		offset.bottom = offset.top + this.$container.outerHeight(false);
 
-    var container = {
-        height: this.$container.outerHeight(false)
-    };
+		var container = {
+				height: this.$container.outerHeight(false)
+		};
 
-    container.top = offset.top;
-    container.bottom = offset.top + container.height;
+		container.top = offset.top;
+		container.bottom = offset.top + container.height;
 
-    var dropdown = {
-      height: this.$dropdown.outerHeight(false)
-    };
+		var dropdown = {
+			height: this.$dropdown.outerHeight(false)
+		};
 
-    var viewport = {
-      top: $window.scrollTop(),
-      bottom: $window.scrollTop() + $window.height()
-    };
+		var viewport = {
+			top: $window.scrollTop(),
+			bottom: $window.scrollTop() + $window.height()
+		};
 
-    var enoughRoomAbove = viewport.top < (offset.top - dropdown.height);
-    var enoughRoomBelow = viewport.bottom > (offset.bottom + dropdown.height);
+		var enoughRoomAbove = viewport.top < (offset.top - dropdown.height);
+		var enoughRoomBelow = viewport.bottom > (offset.bottom + dropdown.height);
 
-    var css = {
-      left: offset.left,
-      top: container.bottom
-    };
+		var css = {
+			left: offset.left,
+			top: container.bottom
+		};
 
-    // Determine what the parent element is to use for calciulating the offset
-    var $offsetParent = this.$dropdownParent;
+		// Determine what the parent element is to use for calciulating the offset
+		var $offsetParent = this.$dropdownParent;
 
-    // For statically positoned elements, we need to get the element
-    // that is determining the offset
-    if ($offsetParent.css('position') === 'static') {
-      $offsetParent = $offsetParent.offsetParent();
-    }
+		// For statically positoned elements, we need to get the element
+		// that is determining the offset
+		if ($offsetParent.css('position') === 'static') {
+			$offsetParent = $offsetParent.offsetParent();
+		}
 
-    var parentOffset = $offsetParent.offset();
+		var parentOffset = $offsetParent.offset();
 
-    css.top -= parentOffset.top
-    css.left -= parentOffset.left;
+		css.top -= parentOffset.top
+		css.left -= parentOffset.left;
 
-    var dropdownPositionOption = this.options.get('dropdownPosition');
+		var dropdownPositionOption = this.options.get('dropdownPosition');
 
-    if (dropdownPositionOption === 'above' || dropdownPositionOption === 'below') {
-      newDirection = dropdownPositionOption;
-    } else {
+		if (dropdownPositionOption === 'above' || dropdownPositionOption === 'below') {
+			newDirection = dropdownPositionOption;
+		} else {
 
-      if (!isCurrentlyAbove && !isCurrentlyBelow) {
-        newDirection = 'below';
-      }
+			if (!isCurrentlyAbove && !isCurrentlyBelow) {
+				newDirection = 'below';
+			}
 
-      if (!enoughRoomBelow && enoughRoomAbove && !isCurrentlyAbove) {
-        newDirection = 'above';
-      } else if (!enoughRoomAbove && enoughRoomBelow && isCurrentlyAbove) {
-        newDirection = 'below';
-      }
+			if (!enoughRoomBelow && enoughRoomAbove && !isCurrentlyAbove) {
+				newDirection = 'above';
+			} else if (!enoughRoomAbove && enoughRoomBelow && isCurrentlyAbove) {
+				newDirection = 'below';
+			}
 
-    }
+		}
 
-    if (newDirection == 'above' ||
-    (isCurrentlyAbove && newDirection !== 'below')) {
-        css.top = container.top - parentOffset.top - dropdown.height;
-    }
+		if (newDirection == 'above' ||
+		(isCurrentlyAbove && newDirection !== 'below')) {
+				css.top = container.top - parentOffset.top - dropdown.height;
+		}
 
-    if (newDirection != null) {
-      this.$dropdown
-        .removeClass('select2-dropdown--below select2-dropdown--above')
-        .addClass('select2-dropdown--' + newDirection);
-      this.$container
-        .removeClass('select2-container--below select2-container--above')
-        .addClass('select2-container--' + newDirection);
-    }
+		if (newDirection != null) {
+			this.$dropdown
+				.removeClass('select2-dropdown--below select2-dropdown--above')
+				.addClass('select2-dropdown--' + newDirection);
+			this.$container
+				.removeClass('select2-container--below select2-container--above')
+				.addClass('select2-container--' + newDirection);
+		}
 
-    this.$dropdownContainer.css(css);
+		this.$dropdownContainer.css(css);
 
-  };
+	};
 
 })(window.jQuery);
 
@@ -206,13 +206,13 @@ $('.about-company-slider').slick({
 	/* AUTOCOMPLETE */
 
 	var result = [
-  {"value":"Массажист","url":"/doctors-detail.html"},
-  {"value":"Уролог","url":"/doctors-detail.html"},
-  {"value":"Узи","url":"/doctors-detail.html"},
-  {"value":"Косметолог","url":"/doctors-detail.html"},
-  {"value":"Педиатр","url":"/doctors-detail.html"},
-  {"value":"Онколог","url":"/doctors-detail.html"},
-  {"value":"Психотерапевт","url":"/doctors-detail.html"}
+	{"value":"Массажист","url":"/doctors-detail.html"},
+	{"value":"Уролог","url":"/doctors-detail.html"},
+	{"value":"Узи","url":"/doctors-detail.html"},
+	{"value":"Косметолог","url":"/doctors-detail.html"},
+	{"value":"Педиатр","url":"/doctors-detail.html"},
+	{"value":"Онколог","url":"/doctors-detail.html"},
+	{"value":"Психотерапевт","url":"/doctors-detail.html"}
 ];
 
 
@@ -347,28 +347,61 @@ $('.about-company-slider').slick({
 	var template = document.querySelector('#reviews').content.cloneNode(true)
 	var $reviewsWrapper = $('.reviews-list');
 
+
 	$('.upload-more').on('inview.uk.scrollspy', function() {
 		var _self = $(this);
-	    setTimeout(function () {
-	    	$reviewsWrapper.append(template);
-	    	
-	    	_self.on('outview.uk.scrollspy', function () {
-	    		_self.removeClass('load uk-scrollspy-init-inview uk-scrollspy-inview');
-	    	});
-	    }, 2000);
-	    
+			setTimeout(function () {
+				$reviewsWrapper.append(template);
+				_self.removeClass('load uk-scrollspy-init-inview uk-scrollspy-inview');
+				_self.on('outview.uk.scrollspy', function () {
+				});
+			}, 2000);
+			
 	});
+
 
 	/* MODAL FORM RADIO-BUTTON CHANGE */
 
 	$('.uk-modal').on('show.uk.modal', function() {
-		var $radioWrapper = $(this).children('.radio-wrapper');
-		var radio = $(this).find('input[type="radio"]').attr('checked');
-		console.log(radio)
+		var btnValue = $('.gray-btn').attr('data-val'),
+			$radioWrapper = $(this).find('.radio-wrapper');
+
+		if (btnValue == 'radio-doctor') {
+			$(this).find('.review-clinic').css('display','none');
+			$radioWrapper.find('input#radio-doctor').attr('checked', 'true')
+		};
+
+		if (btnValue == 'radio-clinic') {
+			$(this).find('.review-doctor').css('display','none')
+			$radioWrapper.find('input#radio-clinic').attr('checked', 'true')
+		};
+		
 	});
 
 	$('.radio-wrapper').on('change','input[type="radio"]', function () {
-		console.log(this)
+
+		$('.radio-value-fields').addClass('change');
+
+		if($(this).attr('id') == 'radio-clinic') {
+			$('.radio-value-fields').find('.review-doctor').fadeOut('350',function () {
+				$('.review-clinic').fadeIn('350', function () {
+					$('.js__custom-select').val([]).trigger('change');
+					$('.review-doctor').find('textarea').val('');
+					$('.radio-value-fields').removeClass('change');
+				});
+			});
+		};
+
+		if($(this).attr('id') == 'radio-doctor') {
+
+			$('.radio-value-fields').find('.review-clinic').fadeOut('350',function () {
+				$('.review-doctor').fadeIn('350', function () {
+					$('.review-clinic').find('textarea').val('');
+					$('.radio-value-fields').removeClass('change');
+				});
+			});
+		};
+
 	});
 
 
