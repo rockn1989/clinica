@@ -32,6 +32,36 @@
 			text-decoration: none;
 		}
 	}
+	.logo {
+		display: block;
+		text-decoration: none;
+		.clearfix();
+    @media (min-width: 0) and (max-width: 480px) {
+    	text-align: center;
+    }
+		img {
+			margin-right: 10px;
+			float: left;
+	    @media (min-width: 0) and (max-width: 480px) {
+	    	margin: 0;
+	    	float: none;
+	    }
+		}
+		&__text {
+			padding-top: 8px;
+			font-size: 14px;
+	    line-height: 13px;
+	    text-decoration: none;
+	    display: block;
+	    overflow: hidden;
+	    color: #6C6161;
+	    font-family: 'Myriad';
+	    letter-spacing: 0;
+	    @media (min-width: 0) and (max-width: 480px) {
+	    	display: none;
+	    }
+		}
+	}
 }
 
 .contacts {
