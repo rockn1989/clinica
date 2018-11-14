@@ -1,0 +1,40 @@
+{% extends "layouts/default.html" %}
+{% set title="Вакансии" %}
+{% set bread = ["Главная", "Вакансии", "Администратор медицинского центра"] %}
+{% set main = false %}
+{% block content %}
+	<div class="content">
+		<div class="content-header">
+			<div class="uk-container">
+				{% include "includes/breadcrumbs.html" %}
+				<h1>Администратор медицинского центра</h1>
+			</div>
+		</div>
+		<div class="content-body">
+			<div class="uk-container">
+				<div class="job-shot-desc">опыт работы от 1 года, сменный график работы</div>
+				<div class="job-salary">от 50 000 ₽</div>
+				<a href="#job-modal" class="btn btn--fill uk-margin-large-top" data-uk-modal>Откликнуться на вакансию</a>
+				<h2>Обязанности:</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime pariatur facilis, cumque ea consequuntur quas quia in cum officia. Eum molestias assumenda, ad aspernatur impedit!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis neque, accusantium debitis laudantium praesentium amet a, adipisci voluptatem in, voluptates expedita quibusdam harum quos!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nulla, illo blanditiis, omnis quos quisquam ut! Deleniti minus, harum velit totam voluptatum aliquam corporis vitae.</li>
+				</ul>
+				<h2>Требования:</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime pariatur facilis, cumque ea consequuntur quas quia in cum officia. Eum molestias assumenda, ad aspernatur impedit!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis neque, accusantium debitis laudantium praesentium amet a, adipisci voluptatem in, voluptates expedita quibusdam harum quos!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nulla, illo blanditiis, omnis quos quisquam ut! Deleniti minus, harum velit totam voluptatum aliquam corporis vitae.</li>
+				</ul>
+				<h2>Условия:</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime pariatur facilis, cumque ea consequuntur quas quia in cum officia. Eum molestias assumenda, ad aspernatur impedit!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis neque, accusantium debitis laudantium praesentium amet a, adipisci voluptatem in, voluptates expedita quibusdam harum quos!</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nulla, illo blanditiis, omnis quos quisquam ut! Deleniti minus, harum velit totam voluptatum aliquam corporis vitae.</li>
+				</ul>
+				<a href="#job-modal" class="btn btn--fill uk-margin-large-top" data-uk-modal>Откликнуться на вакансию</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
